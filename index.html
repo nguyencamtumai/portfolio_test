@@ -1,0 +1,1506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Nguyễn Cẩm Tú Mai — Strategic Planning Portfolio</title>
+<meta name="description" content="Strategic Planning Portfolio of Nguyễn Cẩm Tú Mai — 7+ years across 30+ clients in Vietnam.">
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+/* ── FLOWER-INSPIRED TOKENS ── */
+:root {
+  --leaf:       #228B22;
+  --leaf-dim:   #166316;
+  --leaf-lt:    #f0fdf4;
+  --pink:       #FFB6C1;
+  --pink-lt:    #fdf2f8;
+  --pink-dark:  #d4607a;
+  --purple:     #DDA0DD;
+  --purple-dark:#8B5E8B;
+  --yellow:     #FFE4B5;
+  --soil:       #8B4513;
+  --black:      #1a1a1a;
+  --white:      #ffffff;
+  --gray:       #6b7280;
+  --gray-lt:    #f3f4f6;
+  --gray-bd:    #e5e7eb;
+  --radius-sm:  8px;
+  --radius-md:  16px;
+  --radius-lg:  24px;
+  --radius-pill:9999px;
+  --shadow-sm:  0 1px 4px rgba(0,0,0,0.07), 0 1px 2px rgba(0,0,0,0.04);
+  --shadow-md:  0 4px 18px rgba(0,0,0,0.09), 0 2px 6px rgba(0,0,0,0.05);
+  --shadow-lg:  0 12px 36px rgba(0,0,0,0.11), 0 4px 14px rgba(0,0,0,0.06);
+  --nav-h:      64px;
+}
+
+/* ── RESET ── */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Be Vietnam Pro',sans-serif;
+  font-weight:300;color:var(--black);
+  font-size:15px;line-height:1.7;overflow-x:hidden;
+}
+a{color:inherit;text-decoration:none}
+
+/* ── FLOWER GARDEN BACKGROUND (full page) ── */
+body{
+  background:
+    radial-gradient(ellipse at 10% 20%, rgba(255,182,193,0.18) 0%, transparent 45%),
+    radial-gradient(ellipse at 85% 10%, rgba(221,160,221,0.15) 0%, transparent 40%),
+    radial-gradient(ellipse at 90% 60%, rgba(144,238,144,0.15) 0%, transparent 45%),
+    radial-gradient(ellipse at 20% 80%, rgba(255,228,181,0.18) 0%, transparent 40%),
+    linear-gradient(160deg, #f0fdf4 0%, #ffffff 40%, #fdf2f8 100%);
+  background-attachment: fixed;
+}
+
+/* ── SCROLL ANIMATIONS (Flower bloom) ── */
+.reveal{
+  opacity:0;
+  transform:scale(0.96) translateY(22px);
+  transition:opacity 0.65s ease, transform 0.65s ease;
+}
+.reveal.in{opacity:1;transform:scale(1) translateY(0)}
+.reveal-delay-1{transition-delay:.1s}
+.reveal-delay-2{transition-delay:.2s}
+.reveal-delay-3{transition-delay:.3s}
+.reveal-delay-4{transition-delay:.4s}
+
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.2}}
+
+/* ── NAV ── */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:200;height:var(--nav-h);
+  display:flex;align-items:center;justify-content:space-between;padding:0 60px;
+  background:rgba(255,255,255,0.82);backdrop-filter:blur(18px);
+  border-bottom:1px solid transparent;transition:border-color .3s,background .3s;
+}
+nav.scrolled{border-color:var(--gray-bd);background:rgba(255,255,255,0.95)}
+.nav-logo{font-size:14px;font-weight:600;letter-spacing:.05em;color:var(--leaf)}
+.nav-links{display:flex;gap:6px}
+.nav-links a{
+  font-size:12px;font-weight:500;letter-spacing:.04em;
+  color:var(--gray);padding:6px 14px;border-radius:var(--radius-pill);
+  transition:all .2s;
+}
+.nav-links a:hover{background:#dcfce7;color:var(--leaf)}
+.nav-links a.active{background:var(--leaf);color:#fff}
+.nav-hamburger{
+  display:none;flex-direction:column;gap:5px;
+  background:none;border:none;cursor:pointer;padding:4px;
+}
+.nav-hamburger span{display:block;width:22px;height:1.5px;background:var(--black);transition:all .3s}
+.nav-hamburger.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.nav-hamburger.open span:nth-child(2){opacity:0}
+.nav-hamburger.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+.nav-mobile{
+  display:none;position:fixed;top:var(--nav-h);left:0;right:0;bottom:0;
+  background:rgba(255,255,255,0.97);backdrop-filter:blur(20px);
+  z-index:199;flex-direction:column;align-items:center;justify-content:center;gap:32px;
+}
+.nav-mobile.open{display:flex}
+.nav-mobile a{font-size:22px;font-weight:400;color:var(--black);padding:10px 32px;border-radius:var(--radius-pill);transition:all .2s}
+.nav-mobile a:hover{background:#dcfce7;color:var(--leaf)}
+
+/* ── SECTION BASE ── */
+section{padding:100px 60px}
+.section-eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--leaf);background:#dcfce7;
+  padding:5px 16px;border-radius:var(--radius-pill);margin-bottom:48px;
+}
+.ph{
+  background:var(--gray-lt);border-radius:var(--radius-sm);
+  display:flex;align-items:center;justify-content:center;
+  color:var(--gray);font-size:10px;letter-spacing:.04em;text-align:center;
+}
+
+/* ════════════════════
+   §1  HERO
+════════════════════ */
+#about{
+  min-height:100vh;
+  display:grid;grid-template-columns:1fr 360px;gap:0 80px;
+  align-items:center;
+  padding-top:calc(var(--nav-h) + 64px);padding-bottom:64px;
+}
+.hero-left{display:flex;flex-direction:column;gap:32px}
+.hero-tag{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--pink-dark);background:#fff0f5;
+  padding:5px 16px;border-radius:var(--radius-pill);width:fit-content;
+}
+#about{
+  min-height:100vh;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  text-align:center;
+  padding-top:calc(var(--nav-h) + 48px);padding-bottom:64px;
+}
+.hero-photo-wrap{animation:float 5s ease-in-out infinite;margin-bottom:36px}
+.hero-photo{
+  width:180px;height:180px;border-radius:50%;
+  background:linear-gradient(135deg,#dcfce7 0%,#bbf7d0 50%,#fce7f3 100%);
+  display:flex;align-items:center;justify-content:center;
+  color:var(--leaf);font-size:11px;letter-spacing:.06em;text-align:center;
+  box-shadow:0 12px 40px rgba(34,139,34,.15);border:3px solid rgba(255,255,255,.9);
+}
+.hero-tag{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--pink-dark);background:#fff0f5;
+  padding:5px 16px;border-radius:var(--radius-pill);
+  margin-bottom:20px;
+}
+.hero-name{
+  font-size:clamp(48px,7vw,88px);font-weight:300;
+  line-height:1.0;letter-spacing:-.02em;
+  margin-bottom:20px;
+}
+.hero-name em{font-style:italic;color:var(--leaf);font-weight:300}
+.hero-belief{
+  font-size:12px;font-weight:300;line-height:1.9;
+  margin-bottom:32px;
+}
+.hero-belief strong{font-weight:600;color:var(--black)}
+.hero-stats{display:flex;gap:48px;justify-content:center;margin-bottom:36px}
+.hero-stat{text-align:center}
+.hero-stat-num{font-size:32px;font-weight:300;color:var(--leaf);line-height:1}
+.hero-stat-label{font-size:11px;color:var(--gray);margin-top:4px}
+.hero-cta{
+  display:inline-flex;align-items:center;gap:10px;
+  padding:14px 32px;background:var(--leaf);color:#fff;
+  font-size:13px;font-weight:500;border-radius:var(--radius-pill);
+  box-shadow:0 4px 16px rgba(34,139,34,.35);
+  transition:background .2s,transform .2s,box-shadow .2s,gap .2s;
+}
+.hero-cta:hover{background:var(--leaf-dim);gap:16px;transform:translateY(-2px);box-shadow:0 6px 22px rgba(34,139,34,.4)}
+.hero-divider{width:100%;height:1px;background:var(--gray-bd);margin-top:64px}
+
+/* ════════════════════
+   §2  EXPERIENCES
+════════════════════ */
+#experiences{background:transparent}
+.exp-wrap{
+  background:rgba(255,255,255,.85);backdrop-filter:blur(8px);
+  border-radius:var(--radius-lg);box-shadow:var(--shadow-md);
+  padding:48px;display:grid;grid-template-columns:180px 1fr;gap:0;
+}
+.exp-sidebar{padding-right:40px;border-right:1px solid var(--gray-bd)}
+.exp-sidebar-title{font-size:10px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--gray);margin-bottom:20px}
+.skill-pill{
+  display:block;font-size:12px;font-weight:400;color:var(--black);
+  padding:8px 12px;border-radius:var(--radius-sm);margin-bottom:4px;transition:all .2s;
+}
+.skill-pill:hover{background:#dcfce7;color:var(--leaf);padding-left:16px}
+.exp-timeline{padding-left:48px}
+.exp-item{position:relative;padding-bottom:40px;cursor:pointer}
+.exp-item:last-child{padding-bottom:0}
+.exp-item::before{
+  content:'';position:absolute;left:-57px;top:8px;
+  width:10px;height:10px;border-radius:50%;
+  background:#fff;border:2px solid var(--gray-bd);transition:all .2s;
+}
+.exp-item::after{
+  content:'';position:absolute;left:-52px;top:18px;
+  width:1px;bottom:0;background:var(--gray-bd);
+}
+.exp-item:last-child::after{display:none}
+.exp-item:hover::before,.exp-item.open::before{
+  background:var(--leaf);border-color:var(--leaf);
+  box-shadow:0 0 0 5px #dcfce7;
+}
+.exp-period{font-size:11px;color:var(--gray);margin-bottom:3px}
+.exp-role{font-size:17px;font-weight:400;color:var(--black)}
+.exp-company{font-size:12px;font-weight:600;color:var(--leaf);margin-top:2px;letter-spacing:.04em}
+.exp-detail{max-height:0;overflow:hidden;transition:max-height .45s ease,margin-top .3s}
+.exp-item.open .exp-detail{max-height:260px;margin-top:14px}
+.exp-desc{font-size:13px;font-weight:300;color:var(--gray);line-height:1.75;margin-top:6px}
+.exp-desc strong{font-weight:500;color:var(--black)}
+
+/* Freelance item — styled differently */
+.exp-item.freelance{
+  margin-top:24px;padding:20px 24px;
+  background:linear-gradient(135deg,#f0fdf4,#fdf2f8);
+  border-radius:var(--radius-md);border:1px dashed #86efac;
+  padding-bottom:20px;
+}
+.exp-item.freelance::before{left:-73px}
+.exp-item.freelance::after{left:-68px}
+.exp-item.freelance .exp-role{font-size:15px;font-style:italic}
+.exp-item.freelance .exp-company{color:var(--pink-dark)}
+
+/* ════════════════════
+   §3  CLIENTS
+════════════════════ */
+#clients{}
+.clients-header{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:40px}
+.clients-headline{font-size:34px;font-weight:300;line-height:1.2}
+.clients-headline em{font-style:italic;color:var(--leaf)}
+.clients-count{font-size:56px;font-weight:300;color:var(--gray-bd);line-height:1}
+.clients-note{
+  font-size:12px;color:var(--gray);font-style:italic;
+  margin-bottom:28px;padding:12px 20px;
+  background:rgba(255,255,255,.7);border-radius:var(--radius-md);
+  border-left:3px solid var(--pink);display:inline-block;
+}
+.clients-filter{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:32px}
+.filter-btn{
+  font-size:11px;font-weight:500;letter-spacing:.06em;
+  padding:7px 16px;border:1.5px solid var(--gray-bd);background:#fff;
+  color:var(--gray);cursor:pointer;border-radius:var(--radius-pill);
+  transition:all .2s;box-shadow:var(--shadow-sm);
+}
+.filter-btn:hover{border-color:var(--leaf);color:var(--leaf);background:#dcfce7}
+.filter-btn.active{background:var(--leaf);border-color:var(--leaf);color:#fff;box-shadow:0 4px 12px rgba(34,139,34,.3)}
+.clients-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:10px}
+.client-ph{
+  height:60px;border:1.5px solid var(--gray-bd);background:#fff;
+  display:flex;align-items:center;justify-content:center;
+  font-size:10px;font-weight:500;color:var(--gray);text-align:center;
+  padding:8px;border-radius:var(--radius-md);box-shadow:var(--shadow-sm);
+  transition:all .25s;cursor:default;
+}
+.client-ph:hover{border-color:var(--leaf);color:var(--leaf);background:#dcfce7;transform:translateY(-3px);box-shadow:var(--shadow-md)}
+
+/* ════════════════════
+   §4  CASES — LIGHT!
+════════════════════ */
+#cases{
+  background:transparent;
+  color:var(--black);position:relative;overflow:hidden;
+}
+/* soft section divider */
+#cases::before{
+  content:'';position:absolute;inset:0;pointer-events:none;
+  background:
+    radial-gradient(ellipse at 5% 15%,rgba(255,182,193,.22) 0%,transparent 50%),
+    radial-gradient(ellipse at 95% 85%,rgba(221,160,221,.18) 0%,transparent 50%),
+    radial-gradient(ellipse at 50% 50%,rgba(144,238,144,.12) 0%,transparent 60%);
+}
+#cases>*{position:relative}
+.section-eyebrow-cases{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--purple-dark);background:#f5e6f5;
+  padding:5px 16px;border-radius:var(--radius-pill);margin-bottom:48px;
+}
+.cases-tabs{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:48px}
+.case-tab{
+  font-size:11px;font-weight:500;letter-spacing:.06em;
+  padding:7px 16px;border:1.5px solid var(--gray-bd);background:#fff;
+  color:var(--gray);cursor:pointer;border-radius:var(--radius-pill);
+  transition:all .2s;box-shadow:var(--shadow-sm);
+}
+.case-tab:hover{border-color:var(--purple-dark);color:var(--purple-dark);background:#f5e6f5}
+.case-tab.active{background:var(--purple-dark);border-color:var(--purple-dark);color:#fff;box-shadow:0 4px 14px rgba(139,94,139,.35)}
+.cases-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:16px}
+.case-card{
+  background:rgba(255,255,255,.9);
+  border:1.5px solid var(--gray-bd);
+  border-radius:var(--radius-lg);overflow:hidden;cursor:pointer;display:none;
+  box-shadow:var(--shadow-sm);
+  transition:transform .25s,box-shadow .25s,border-color .25s;
+  backdrop-filter:blur(6px);
+}
+.case-card.visible{display:block}
+.case-card:hover{transform:translateY(-5px);box-shadow:var(--shadow-lg);border-color:#bbf7d0}
+.case-img{width:100%;aspect-ratio:16/9;position:relative;overflow:hidden;background:var(--gray-lt)}
+.case-img-grid{position:absolute;inset:0;display:grid;gap:2px;padding:2px}
+.case-img-grid.g2{grid-template-columns:1fr 1fr}
+.case-img-grid.g3{grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr}
+.case-img-grid.g3 .ph:first-child{grid-row:1/3}
+.case-img-grid.g4{grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr}
+.case-img-grid .ph{border-radius:0;background:#e9f5ea;color:#9ca3af;font-size:9px}
+.case-img-overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(135deg,rgba(34,139,34,.55) 0%,rgba(221,160,221,.45) 100%);
+  opacity:0;transition:opacity .3s;
+  display:flex;align-items:center;justify-content:center;
+}
+.case-img-overlay span{
+  font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;
+  color:#fff;background:rgba(255,255,255,.2);
+  padding:8px 20px;border-radius:var(--radius-pill);border:1px solid rgba(255,255,255,.5);
+}
+.case-card:hover .case-img-overlay{opacity:1}
+.case-body{padding:22px 24px 24px}
+.case-cat{font-size:10px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--leaf);margin-bottom:6px}
+.case-client{font-size:17px;font-weight:400;color:var(--black);margin-bottom:4px}
+.case-title{font-size:11px;font-weight:400;color:var(--gray);line-height:1.5}
+.case-meta{margin-top:16px;padding-top:16px;border-top:1px solid var(--gray-bd);display:flex;align-items:center;justify-content:space-between}
+.case-year{font-size:11px;color:var(--gray);letter-spacing:.06em}
+.case-arrow{font-size:16px;color:var(--gray-bd);transition:color .2s,transform .2s}
+.case-card:hover .case-arrow{color:var(--purple-dark);transform:translateX(4px)}
+.case-detail{max-height:0;overflow:hidden;transition:max-height .5s ease}
+.case-card.expanded .case-detail{max-height:900px}
+.case-detail-inner{
+  padding:24px;margin:0 16px 16px;
+  background:linear-gradient(135deg,#f0fdf4,#fdf2f8);
+  border-radius:var(--radius-md);border:1px solid #e9d5ff;
+}
+.cd-head{font-size:10px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--purple-dark);margin-bottom:8px}
+.cd-text{font-size:13px;font-weight:300;color:#374151;line-height:1.8;margin-bottom:20px}
+.cd-text strong{font-weight:600;color:var(--black)}
+.cd-results{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:12px;margin-bottom:20px}
+.cd-stat-num{font-size:22px;font-weight:300;color:var(--leaf);line-height:1}
+.cd-stat-label{font-size:11px;color:var(--gray);margin-top:3px}
+.cd-role{font-size:12px;font-style:italic;color:var(--gray);padding-top:14px;border-top:1px solid var(--gray-bd)}
+
+/* In-progress */
+.ip-section{margin-top:80px}
+.ip-label{
+  font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--gray);display:flex;align-items:center;gap:10px;margin-bottom:28px;
+}
+.ip-label::before{content:"●";font-size:8px;color:var(--pink-dark);animation:blink 1.4s infinite}
+.ip-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.ip-card{
+  background:rgba(255,255,255,.85);border:1.5px solid var(--gray-bd);
+  border-radius:var(--radius-md);padding:24px;
+  transition:all .25s;backdrop-filter:blur(4px);
+}
+.ip-card:hover{background:#fff;transform:translateY(-3px);box-shadow:var(--shadow-md);border-color:#bbf7d0}
+.ip-cat{font-size:10px;color:var(--leaf);letter-spacing:.1em;text-transform:uppercase;margin-bottom:8px}
+.ip-title{font-size:14px;font-weight:400;color:var(--black);margin-bottom:10px;line-height:1.4}
+.ip-desc{font-size:12px;font-weight:300;color:var(--gray);line-height:1.7}
+.ip-imgs{display:grid;grid-template-columns:repeat(4,1fr);gap:4px;margin-top:16px}
+.ip-imgs .ph{height:44px;background:#e9f5ea;color:#9ca3af;font-size:8px;border-radius:6px}
+
+/* Other Wins */
+.ow-section{margin-top:80px}
+.ow-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.ow-item{
+  background:rgba(255,255,255,.85);border:1.5px solid var(--gray-bd);
+  border-radius:var(--radius-md);padding:24px;transition:all .25s;
+}
+.ow-item:hover{background:#fff;transform:translateY(-3px);box-shadow:var(--shadow-md);border-color:#bbf7d0}
+.ow-cat{font-size:10px;color:var(--leaf);letter-spacing:.1em;text-transform:uppercase;margin-bottom:6px}
+.ow-title{font-size:14px;font-weight:500;color:var(--purple-dark);margin-bottom:10px}
+.ow-desc{font-size:12px;font-weight:300;color:var(--gray);line-height:1.7}
+.ow-imgs{display:grid;grid-template-columns:repeat(2,1fr);gap:4px;margin-bottom:14px}
+.ow-imgs .ph{height:56px;background:#e9f5ea;color:#9ca3af;font-size:9px;border-radius:6px}
+
+/* Mini wins */
+.mw-section{margin-top:56px}
+.mw-title{font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--gray);margin-bottom:24px}
+.mw-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.mw-item{
+  background:rgba(255,255,255,.85);border:1.5px solid var(--gray-bd);
+  border-radius:var(--radius-md);padding:16px 18px;transition:all .2s;
+}
+.mw-item:hover{background:#fff;border-color:#bbf7d0;box-shadow:var(--shadow-sm)}
+.mw-cat{font-size:9px;color:var(--gray);letter-spacing:.1em;text-transform:uppercase;margin-bottom:3px}
+.mw-name{font-size:12px;font-weight:500;color:var(--black);margin-bottom:10px}
+.mw-imgs{display:grid;grid-template-columns:1fr 1fr;gap:4px;margin-top:10px}
+.mw-imgs .ph{height:52px;background:#e9f5ea;color:#9ca3af;font-size:8px;border-radius:6px}
+
+/* ════════════════════
+   §5  CONTACT
+════════════════════ */
+#contact{padding-bottom:80px;text-align:center}
+.contact-headline{font-size:44px;font-weight:300;line-height:1.15;margin-bottom:16px}
+.contact-headline em{font-style:italic;color:var(--leaf)}
+.contact-sub{font-size:15px;color:var(--gray);font-weight:300;max-width:480px;margin:0 auto 40px;line-height:1.7}
+.contact-links{display:flex;align-items:center;justify-content:center;gap:32px;flex-wrap:wrap;margin-bottom:0}
+.contact-row{
+  display:inline-flex;align-items:center;gap:10px;
+  padding:10px 20px;border-radius:var(--radius-pill);
+  background:#fff;box-shadow:var(--shadow-sm);
+  transition:all .2s;
+}
+.contact-row:hover{transform:translateY(-2px);box-shadow:var(--shadow-md);color:var(--leaf)}
+.contact-icon{
+  width:32px;height:32px;border-radius:50%;
+  background:#dcfce7;display:flex;align-items:center;justify-content:center;
+  font-size:14px;color:var(--leaf);flex-shrink:0;
+}
+.contact-val{font-size:13px;font-weight:400;color:var(--black);transition:color .2s}
+.contact-row:hover .contact-val{color:var(--leaf)}
+.contact-footer{margin-top:64px;padding-top:24px;border-top:1px solid var(--gray-bd);display:flex;justify-content:space-between;align-items:center}
+.contact-footer-name{font-size:12px;color:var(--gray)}
+.contact-footer-copy{font-size:11px;color:var(--gray-bd)}
+
+/* ── CLIENTS EXPANSION LAYOUT ── */
+.cl-expand{margin-top:0}
+.cl-tabs{
+  display:flex;overflow-x:auto;gap:0;
+  border:1px solid var(--gray-bd);border-radius:var(--radius-lg) var(--radius-lg) 0 0;
+  scrollbar-width:none;background:rgba(255,255,255,.6);
+}
+.cl-tabs::-webkit-scrollbar{display:none}
+.cl-tab{
+  flex-shrink:0;padding:16px 20px;cursor:pointer;
+  border-right:1px solid var(--gray-bd);
+  transition:all .2s;min-width:140px;
+  border-bottom:2px solid transparent;
+}
+.cl-tab:last-child{border-right:none}
+.cl-tab:hover:not(.active){background:rgba(34,139,34,.04)}
+.cl-tab.active{background:#fff;border-bottom-color:var(--leaf)}
+.cl-tab-period{font-size:11px;font-weight:600;color:var(--black);margin-bottom:3px}
+.cl-tab.active .cl-tab-period{color:var(--leaf)}
+.cl-tab-agency{font-size:10px;color:var(--gray);margin-bottom:2px}
+.cl-tab-title{font-size:9px;color:#aaa;font-style:italic}
+.cl-tab-freelance .cl-tab-period{color:var(--pink-dark)}
+.cl-tab-freelance.active .cl-tab-period{color:var(--pink-dark)}
+.cl-tab-freelance.active{border-bottom-color:var(--pink-dark)}
+
+/* Panel */
+.cl-panel{
+  background:#fff;border:1px solid var(--gray-bd);border-top:none;
+  border-radius:0 0 var(--radius-lg) var(--radius-lg);
+  padding:28px 32px;min-height:180px;
+}
+.cl-panel-meta{margin-bottom:20px}
+.cl-panel-role{font-size:15px;font-weight:500;color:var(--black)}
+.cl-panel-info{font-size:11px;color:var(--gray);margin-top:3px}
+
+/* Swimlanes */
+.cl-swimlanes{display:flex;flex-direction:column;gap:10px}
+.bl-lane{display:flex;align-items:center;gap:16px;padding:10px 14px;background:#f9fafb;border-radius:var(--radius-md)}
+.bl-cat{
+  font-size:9px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--gray);min-width:130px;flex-shrink:0;
+}
+.bl-logos{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.bl-logo{
+  height:36px;width:80px;
+  padding:4px 8px;border:1px solid var(--gray-bd);border-radius:var(--radius-sm);
+  background:#fff;display:flex;align-items:center;justify-content:center;
+  transition:all .2s;overflow:hidden;flex-shrink:0;
+}
+.bl-logo:hover{border-color:var(--leaf);transform:translateY(-1px);box-shadow:var(--shadow-sm)}
+.bl-logo img{max-height:24px;max-width:64px;width:auto;height:auto;object-fit:contain;display:block}
+.bl-logo span{font-size:9px;font-weight:500;color:var(--gray);text-align:center;line-height:1.2}
+
+/* Case study link bar */
+.cl-case-bar{
+  margin-top:20px;padding-top:16px;border-top:1px solid var(--gray-bd);
+  display:flex;align-items:center;gap:16px;flex-wrap:wrap;
+}
+.cl-case-text-label{font-size:11px;color:var(--gray)}
+.cl-case-btn{
+  font-size:11px;font-weight:500;color:var(--leaf);cursor:pointer;
+  border-bottom:1px solid transparent;transition:all .2s;
+}
+.cl-case-btn:hover{border-bottom-color:var(--leaf)}
+
+/* Responsive */
+@media(max-width:860px){
+  .cl-tab{min-width:110px;padding:12px 14px}
+  .bl-lane{flex-direction:column;align-items:flex-start;gap:8px}
+  .bl-cat{min-width:auto}
+}
+.clients-layout{display:grid;grid-template-columns:200px 1fr;gap:0}
+.cl-sidebar{padding-right:32px;border-right:1px solid var(--gray-bd)}
+.cl-cat{
+  padding:12px 14px;border-radius:var(--radius-md);cursor:pointer;
+  margin-bottom:4px;transition:all .2s;
+  border:1px solid transparent;
+}
+.cl-cat:hover{background:rgba(34,139,34,.06);border-color:#bbf7d0}
+.cl-cat.active{background:var(--leaf);border-color:var(--leaf)}
+.cl-cat.active .cl-cat-name{color:#fff;font-weight:500}
+.cl-cat.active .cl-cat-count{color:rgba(255,255,255,.65)}
+.cl-cat.active .cl-cat-link{color:rgba(255,255,255,.8)}
+.cl-cat.active .cl-cat-link:hover{color:#fff}
+.cl-cat-name{font-size:12px;font-weight:400;color:var(--black);transition:color .2s}
+.cl-cat-count{font-size:10px;color:var(--gray);margin-top:2px;transition:color .2s}
+.cl-cat-link{
+  font-size:10px;font-weight:500;letter-spacing:.04em;
+  color:var(--leaf);margin-top:6px;
+  display:block;transition:color .2s;
+}
+.cl-cat-link:hover{text-decoration:underline}
+.cl-right{padding-left:36px}
+.cl-meta{display:flex;align-items:center;gap:20px;margin-bottom:16px}
+.cl-total{font-size:11px;color:var(--gray)}
+.cl-case-link{
+  font-size:11px;font-weight:500;color:var(--leaf);
+  cursor:pointer;transition:all .2s;letter-spacing:.02em;
+  border-bottom:1px solid transparent;
+}
+.cl-case-link:hover{border-bottom-color:var(--leaf)}
+.cl-case-link.hidden{display:none}
+.cl-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(100px,1fr));
+  gap:8px;
+}
+.cl-grid .client-ph{
+  height:52px;border:1px solid var(--gray-bd);background:#fff;
+  display:flex;align-items:center;justify-content:center;
+  font-size:10px;font-weight:500;color:var(--gray);text-align:center;
+  padding:6px;border-radius:var(--radius-md);
+  transition:all .22s;cursor:default;
+}
+.cl-grid .client-ph:hover{
+  border-color:var(--leaf);color:var(--leaf);
+  background:#f0fdf4;transform:translateY(-2px);
+  box-shadow:0 4px 12px rgba(34,139,34,.1);
+}
+.cl-grid .client-ph.hidden{display:none}
+
+/* ── RESPONSIVE ── */
+@media(max-width:860px){
+  nav{padding:0 20px}
+  .nav-links{display:none}
+  .nav-hamburger{display:flex}
+  section{padding:72px 20px}
+  #about{padding-top:calc(var(--nav-h) + 40px)}
+  .hero-name{font-size:clamp(38px,10vw,64px)}
+  .hero-stats{gap:32px}
+  .exp-wrap{grid-template-columns:1fr;padding:28px}
+  .exp-sidebar{display:none}
+  .exp-timeline{padding-left:24px}
+  .clients-layout{grid-template-columns:1fr}
+  .cl-sidebar{display:flex;flex-wrap:wrap;gap:6px;padding-right:0;border-right:none;border-bottom:1px solid var(--gray-bd);padding-bottom:16px;margin-bottom:20px}
+  .cl-cat{padding:7px 12px;margin-bottom:0}
+  .cl-cat-count{display:none}
+  .cl-right{padding-left:0}
+  .cases-grid{grid-template-columns:1fr}
+  .ip-grid{grid-template-columns:1fr;gap:10px}
+  .ow-grid{grid-template-columns:1fr;gap:10px}
+  .mw-grid{grid-template-columns:repeat(2,1fr)}
+  .contact-inner{grid-template-columns:1fr;gap:40px}
+}
+
+/* ── CASE STUDY MEDIA ── */
+.ci-item{overflow:hidden;border-radius:0;position:relative;background:#e9f5ea}
+.ci-item img{width:100%;height:100%;object-fit:cover;display:block}
+.ci-item iframe{width:100%;height:100%;border:none;display:block}
+.case-img-grid{position:absolute;inset:0;display:grid;gap:2px;padding:2px}
+.case-img-grid.g1{grid-template-columns:1fr}
+.case-img-grid.g2{grid-template-columns:1fr 1fr}
+.case-img-grid.g3{grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr}
+.case-img-grid.g3 .ci-item:first-child{grid-row:1/3}
+.case-img-grid.g4{grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr}
+
+/* ════════════════════
+   CASE STUDY MODAL
+════════════════════ */
+.modal-overlay{
+  display:none;position:fixed;inset:0;z-index:1000;
+  background:rgba(10,10,10,0.82);backdrop-filter:blur(6px);
+  align-items:center;justify-content:center;
+  padding:20px;
+}
+.modal-overlay.open{display:flex}
+.modal-box{
+  background:#fff;border-radius:20px;
+  width:100%;max-width:900px;max-height:90vh;
+  overflow-y:auto;position:relative;
+  scrollbar-width:thin;
+}
+.modal-box::-webkit-scrollbar{width:4px}
+.modal-box::-webkit-scrollbar-thumb{background:#e5e7eb;border-radius:2px}
+.modal-close{
+  position:sticky;top:16px;float:right;margin:16px 16px 0 0;
+  width:36px;height:36px;border-radius:50%;
+  background:rgba(0,0,0,0.08);border:none;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;
+  font-size:18px;color:#374151;z-index:10;
+  transition:background .2s;flex-shrink:0;
+}
+.modal-close:hover{background:rgba(0,0,0,0.15)}
+.modal-inner{padding:32px 36px 40px;clear:both}
+.modal-cat{
+  font-size:10px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--leaf);margin-bottom:8px;
+}
+.modal-client{font-size:24px;font-weight:400;color:var(--black);margin-bottom:4px;line-height:1.2}
+.modal-title{font-size:13px;font-weight:400;color:var(--gray);margin-bottom:28px;line-height:1.5}
+
+/* Modal gallery */
+.modal-gallery{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:8px;margin-bottom:32px;
+}
+.mg-item{border-radius:10px;overflow:hidden;background:#f3f4f6;aspect-ratio:16/9}
+.mg-item.mg-img img{width:100%;height:100%;object-fit:cover;display:block}
+.mg-item.mg-video{aspect-ratio:16/9}
+.mg-item.mg-video iframe{width:100%;height:100%;border:none;display:block}
+
+/* Modal content sections */
+.modal-section{margin-bottom:24px}
+.modal-section-head{
+  font-size:10px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--purple-dark);margin-bottom:8px;
+}
+.modal-text{font-size:14px;font-weight:300;color:#374151;line-height:1.8}
+.modal-text strong{font-weight:600;color:var(--black)}
+.modal-results{
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));
+  gap:14px;margin-top:8px;
+}
+.modal-stat-num{font-size:24px;font-weight:300;color:var(--leaf);line-height:1}
+.modal-stat-label{font-size:11px;color:var(--gray);margin-top:3px}
+.modal-role{
+  font-size:12px;font-style:italic;color:var(--gray);
+  padding-top:16px;border-top:1px solid var(--gray-bd);
+}
+.modal-divider{height:1px;background:var(--gray-bd);margin:20px 0}
+
+/* ── NEW CASE CARD style ── */
+.case-card{
+  background:rgba(255,255,255,.92);border:1.5px solid var(--gray-bd);
+  border-radius:var(--radius-lg);overflow:hidden;cursor:pointer;display:none;
+  box-shadow:var(--shadow-sm);
+  transition:transform .25s,box-shadow .25s,border-color .25s;
+}
+.case-card.visible{display:flex;flex-direction:column}
+.case-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg);border-color:#bbf7d0}
+
+/* thumbnail */
+.case-thumb{
+  width:100%;aspect-ratio:16/9;overflow:hidden;
+  background:var(--gray-lt);flex-shrink:0;position:relative;
+}
+.case-thumb img{
+  width:100%;height:100%;object-fit:cover;display:block;
+  transition:transform .4s ease;
+}
+.case-card:hover .case-thumb img{transform:scale(1.04)}
+.case-thumb-overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(135deg,rgba(34,139,34,.5),rgba(221,160,221,.35));
+  opacity:0;transition:opacity .3s;
+  display:flex;align-items:center;justify-content:center;
+}
+.case-thumb-overlay span{
+  font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;
+  color:#fff;background:rgba(255,255,255,.18);
+  padding:8px 20px;border-radius:var(--radius-pill);
+  border:1px solid rgba(255,255,255,.45);
+}
+.case-card:hover .case-thumb-overlay{opacity:1}
+
+/* card body */
+.case-body{padding:20px 22px 22px;display:flex;flex-direction:column;flex:1}
+.case-cat{font-size:10px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--leaf);margin-bottom:6px}
+.case-client{font-size:16px;font-weight:400;color:var(--black);margin-bottom:3px}
+.case-title{font-size:11px;font-weight:400;color:var(--gray);line-height:1.4;margin-bottom:10px}
+.case-challenge-preview{
+  font-size:12px;font-weight:300;color:#6b7280;line-height:1.65;
+  margin-bottom:16px;flex:1;
+  display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;
+}
+.case-footer{
+  padding-top:14px;border-top:1px solid var(--gray-bd);
+  display:flex;align-items:center;justify-content:space-between;
+}
+.case-year{font-size:11px;color:var(--gray)}
+.case-read-more{
+  font-size:11px;font-weight:600;color:var(--leaf);
+  display:inline-flex;align-items:center;gap:5px;
+  transition:gap .2s;
+}
+.case-card:hover .case-read-more{gap:8px}
+
+@media(max-width:860px){
+  .modal-inner{padding:20px 20px 28px}
+  .modal-gallery{grid-template-columns:repeat(2,1fr)}
+  .modal-box{border-radius:12px}
+}
+
+
+/* Other Wins real images */
+.ow-imgs-real{display:grid;grid-template-columns:1fr 1fr;gap:4px;margin-bottom:14px}
+.ow-imgs-real .ow-media-item{border-radius:var(--radius-sm);overflow:hidden;aspect-ratio:16/9;background:var(--gray-lt)}
+.ow-imgs-real .ow-media-item img{width:100%;height:100%;object-fit:cover;display:block}
+.ow-imgs-real .ow-media-item iframe{width:100%;height:100%;border:none}
+/* Mini wins real images */
+.mw-imgs-real{display:grid;grid-template-columns:1fr 1fr;gap:4px;margin-top:10px}
+.mw-imgs-real .ow-media-item{border-radius:var(--radius-sm);overflow:hidden;aspect-ratio:16/9;background:var(--gray-lt)}
+.mw-imgs-real .ow-media-item img{width:100%;height:100%;object-fit:cover;display:block}
+/* In-progress real images */
+.ip-imgs-real{display:grid;grid-template-columns:repeat(4,1fr);gap:4px;margin-top:16px}
+.ip-imgs-real .ow-media-item{border-radius:6px;overflow:hidden;aspect-ratio:1;background:var(--gray-lt)}
+.ip-imgs-real .ow-media-item img{width:100%;height:100%;object-fit:cover;display:block}
+
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <span class="nav-logo">Tú Mai</span>
+  <div class="nav-links">
+    <a href="#about">About</a>
+    <a href="#experiences">Experiences</a>
+    <a href="#clients">Clients</a>
+    <a href="#cases">Cases</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="nav-mobile" id="navMobile">
+  <a href="#about" onclick="closeMobile()">About</a>
+  <a href="#experiences" onclick="closeMobile()">Experiences</a>
+  <a href="#clients" onclick="closeMobile()">Clients</a>
+  <a href="#cases" onclick="closeMobile()">Cases</a>
+  <a href="#contact" onclick="closeMobile()">Contact</a>
+</div>
+
+<!-- §1 HERO -->
+<section id="about">
+  <div class="hero-photo-wrap reveal">
+    <img src="https://drive.google.com/uc?export=view&id=1wKi-egd8q1Q2TfLrvLXmsYnS6rdYdU3c" alt="Nguyễn Cẩm Tú Mai" style="width:180px;height:180px;border-radius:50%;object-fit:cover;object-position:center top;box-shadow:0 12px 40px rgba(34,139,34,.15);border:3px solid rgba(255,255,255,.9);">
+  </div>
+  <div class="reveal reveal-delay-1">
+    <div class="hero-tag">Portfolio</div>
+  </div>
+  <h1 class="hero-name reveal reveal-delay-1">Nguyễn <em>Cẩm Tú Mai</em></h1>
+  <p class="hero-belief reveal reveal-delay-2">
+    <span style="white-space:nowrap;color:#9ca3af">Seven years with over thirty clients across categories has sharpened one clear belief:</span><br>
+    <span style="white-space:nowrap"><strong style="color:#374151">Strategic planning is an </strong><strong style="color:#be185d">act of focus</strong><span style="color:#374151"> — cut the noise, find the tension worth leaning into, and go all in.</span></span>
+  </p>
+  <div class="hero-stats reveal reveal-delay-2">
+    <div class="hero-stat">
+      <div class="hero-stat-num">7+</div>
+      <div class="hero-stat-label">Years experience</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-num">30+</div>
+      <div class="hero-stat-label">Clients across categories</div>
+    </div>
+  </div>
+  <a href="#cases" class="hero-cta reveal reveal-delay-3">Get to know me →</a>
+  <div class="hero-divider"></div>
+</section>
+
+<!-- §2 EXPERIENCES -->
+<section id="experiences">
+  <div class="section-eyebrow reveal">Experiences</div>
+  <div class="exp-wrap reveal">
+    <div class="exp-sidebar">
+      <div class="exp-sidebar-title">Full Communication Spectrum</div>
+      <span class="skill-pill">Brand Strategy</span>
+      <span class="skill-pill">IMC Strategy</span>
+      <span class="skill-pill">Social Strategy</span>
+      <span class="skill-pill">Advocacy Strategy</span>
+      <span class="skill-pill">PR Strategy</span>
+    </div>
+    <div class="exp-timeline">
+
+      <div class="exp-item reveal">
+        <div class="exp-period">Mar 2025 — April 2026</div>
+        <div class="exp-role">Strategic Planning Manager</div>
+        <div class="exp-company">VML / CLICK Media</div>
+        <div class="exp-detail">
+          <div class="exp-desc">Leading integrated strategy for high-profile clients - translating consumer data, industry intelligence, and ongoing marketing movement tracking into strategic platforms that drive brand growth and inform executive decision-making.</div>
+        </div>
+      </div>
+
+      <div class="exp-item reveal reveal-delay-1">
+        <div class="exp-period">Apr 2024 — Aug 2025</div>
+        <div class="exp-role">Associate Planning Manager</div>
+        <div class="exp-company">TBWA\Group Vietnam</div>
+        <div class="exp-detail">
+          <div class="exp-desc">Driving integrated strategy with focus on social &amp; digital planning - leveraging platform behaviors &amp; cultural signals to make strategic creativity work harder for business outcomes.</div>
+        </div>
+      </div>
+
+      <div class="exp-item reveal reveal-delay-2">
+        <div class="exp-period">Mar 2023 — Mar 2024</div>
+        <div class="exp-role">Associate Planning Manager</div>
+        <div class="exp-company">TEQUILA / TBWA</div>
+        <div class="exp-detail">
+          <div class="exp-desc">Developing consumer and corporate communication strategies - connecting market trends, consumer insights, and Creative into cohesive strategic platforms.</div>
+        </div>
+      </div>
+
+      <div class="exp-item reveal reveal-delay-3">
+        <div class="exp-period">Oct 2021 — Mar 2023</div>
+        <div class="exp-role">Planning Supervisor</div>
+        <div class="exp-company">TEQUILA / TBWA</div>
+        <div class="exp-detail">
+          <div class="exp-desc">Owning strategy development across multiple accounts - maintaining execution oversight to ensure strategic integrity and creative alignment from brief to delivery.</div>
+        </div>
+      </div>
+
+      <div class="exp-item reveal reveal-delay-4">
+        <div class="exp-period">Sep 2018 — Sep 2021</div>
+        <div class="exp-role">Account Executive → Senior Account Executive</div>
+        <div class="exp-company">TEQUILA / TBWA</div>
+        <div class="exp-detail">
+          <div class="exp-desc">Leading account management and strategic alignment across channel mix - driving seamless execution for major retainer clients.</div>
+        </div>
+      </div>
+
+      <div class="exp-item reveal">
+        <div class="exp-period">May 2017 — Mar 2018</div>
+        <div class="exp-role">Account Intern</div>
+        <div class="exp-company">T&amp;A Ogilvy</div>
+        <div class="exp-detail">
+          <div class="exp-desc">Contributing to PR planning and execution for globally recognized brands - building cross-functional collaboration skills and client engagement capabilities from the ground up.</div>
+        </div>
+      </div>
+
+      <!-- Freelance — visually distinct -->
+      <div class="exp-item freelance reveal" style="margin-left:-24px">
+        <div class="exp-period" style="color:var(--pink-dark)">2021 — Present · Ongoing</div>
+        <div class="exp-role">Freelance Strategic Planner</div>
+        <div class="exp-company" style="color:var(--pink-dark)">End-to-end Planning · Brand · IMC · Social Strategy</div>
+        <div class="exp-detail">
+          <div class="exp-desc">Delivering end-to-end planning - covering market research, consumer insight analysis, strategic approach, and campaign development from big idea to execution across brand, IMC &amp; social strategy.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- §3 CLIENTS -->
+<section id="clients">
+  <div class="section-eyebrow reveal">Clients</div>
+  <div class="clients-header reveal">
+    <h2 class="clients-headline">Clients'<br><em>Expansion</em></h2>
+    <div class="clients-count">30+</div>
+  </div>
+
+  <div class="cl-expand reveal">
+    <!-- Era tabs -->
+    <div class="cl-tabs" id="cl-tabs">
+      <div class="cl-tab active" data-i="0" onclick="selectEra(0,this)">
+        <div class="cl-tab-period">2025–2026</div>
+        <div class="cl-tab-agency">VML / CLICK Media</div>
+        <div class="cl-tab-title">Strategic Planning Manager</div>
+      </div>
+      <div class="cl-tab" data-i="1" onclick="selectEra(1,this)">
+        <div class="cl-tab-period">2024–2025</div>
+        <div class="cl-tab-agency">TBWA\Group Vietnam</div>
+        <div class="cl-tab-title">Associate Planning Manager</div>
+      </div>
+      <div class="cl-tab" data-i="2" onclick="selectEra(2,this)">
+        <div class="cl-tab-period">2023–2024</div>
+        <div class="cl-tab-agency">TEQUILA / TBWA</div>
+        <div class="cl-tab-title">Associate Planning Manager</div>
+      </div>
+      <div class="cl-tab" data-i="3" onclick="selectEra(3,this)">
+        <div class="cl-tab-period">2021–2023</div>
+        <div class="cl-tab-agency">TEQUILA / TBWA</div>
+        <div class="cl-tab-title">Planning Supervisor</div>
+      </div>
+      <div class="cl-tab" data-i="4" onclick="selectEra(4,this)">
+        <div class="cl-tab-period">2018–2021</div>
+        <div class="cl-tab-agency">TEQUILA / TBWA</div>
+        <div class="cl-tab-title">Account Executive → Senior AE</div>
+      </div>
+      <div class="cl-tab" data-i="5" onclick="selectEra(5,this)">
+        <div class="cl-tab-period">2017–2018</div>
+        <div class="cl-tab-agency">T&amp;A Ogilvy</div>
+        <div class="cl-tab-title">Account Intern</div>
+      </div>
+      <div class="cl-tab cl-tab-freelance" data-i="6" onclick="selectEra(6,this)">
+        <div class="cl-tab-period">2021 – Present</div>
+        <div class="cl-tab-agency">Independent</div>
+        <div class="cl-tab-title">Freelance Strategic Planner</div>
+      </div>
+    </div>
+
+    <!-- Panel -->
+    <div class="cl-panel">
+      <div class="cl-panel-meta" id="cl-panel-meta"></div>
+      <div class="cl-swimlanes" id="cl-swimlanes"></div>
+      <div class="cl-case-bar" id="cl-case-bar" style="display:none!important"></div>
+    </div>
+  </div>
+</section>
+
+<!-- §4 CASES -->
+<section id="cases">
+  <div class="section-eyebrow-cases reveal">Cases</div>
+  <div class="cases-tabs reveal">
+    <button class="case-tab active" data-filter="all">All</button>
+    <button class="case-tab" data-filter="Finance & Banking">Finance &amp; Banking</button>
+    <button class="case-tab" data-filter="Insurance">Insurance</button>
+    <button class="case-tab" data-filter="FMCG">FMCG</button>
+    <button class="case-tab" data-filter="Beauty & Personal Care">Beauty &amp; Personal Care</button>
+    <button class="case-tab" data-filter="B2B & Industrial">B2B &amp; Industrial</button>
+    <button class="case-tab" data-filter="B2B Logistics">B2B Logistics</button>
+    <button class="case-tab" data-filter="Building & Construction">Building &amp; Construction</button>
+    <button class="case-tab" data-filter="Tourism">Tourism</button>
+  </div>
+  <div class="cases-grid" id="casesGrid">
+    <div class="case-card visible" data-cat="Finance & Banking" data-modal="&lt;div class=&quot;modal-cat&quot;&gt;Finance &amp;amp; Banking&lt;/div&gt;&lt;div class=&quot;modal-client&quot;&gt;Techcombank - Retail Banking Group&lt;/div&gt;&lt;div class=&quot;modal-title&quot;&gt;GTM STRATEGY 2025&lt;/div&gt;&lt;div class=&quot;modal-gallery&quot;&gt;&lt;div class=&quot;mg-item mg-img&quot;&gt;&lt;img src=&quot;https://drive.google.com/uc?export=view&amp;id=1jH4K1aoGjTm_29ZwREyVcrDADfEXVjdn&quot; loading=&quot;lazy&quot; onerror=&quot;this.parentElement.style.display=&#x27;none&#x27;&quot;&gt;&lt;/div&gt;&lt;div class=&quot;mg-item mg-img&quot;&gt;&lt;img src=&quot;https://drive.google.com/uc?export=view&amp;id=1C2iLWVIQXKEHP9907WBt9plEbz0PKkVU&quot; loading=&quot;lazy&quot; onerror=&quot;this.parentElement.style.display=&#x27;none&#x27;&quot;&gt;&lt;/div&gt;&lt;div class=&quot;mg-item mg-img&quot;&gt;&lt;img src=&quot;https://drive.google.com/uc?export=view&amp;id=1toTrg9-VtuHrWk1LnvBptMFCVR4tgqGR&quot; loading=&quot;lazy&quot; onerror=&quot;this.parentElement.style.display=&#x27;none&#x27;&quot;&gt;&lt;/div&gt;&lt;div class=&quot;mg-item mg-img&quot;&gt;&lt;img src=&quot;https://drive.google.com/uc?export=view&amp;id=1egDdXZDz8zBys30qjFsVpcRyJLtfYO7C&quot; loading=&quot;lazy&quot; onerror=&quot;this.parentElement.style.display=&#x27;none&#x27;&quot;&gt;&lt;/div&gt;&lt;div class=&quot;mg-item mg-img&quot;&gt;&lt;img src=&quot;https://drive.google.com/uc?export=view&amp;id=1uAXsRnxuZXRJUPHPM3yZXYL5pHNamtz_&quot; loading=&quot;lazy&quot; onerror=&quot;this.parentElement.style.display=&#x27;none&#x27;&quot;&gt;&lt;/div&gt;&lt;div class=&quot;mg-item mg-img&quot;&gt;&lt;img src=&quot;https://drive.google.com/uc?export=view&amp;id=12gqz67_1rIfrOKc3XkPw-qp_L5bG84Dz&quot; loading=&quot;lazy&quot; onerror=&quot;this.parentElement.style.display=&#x27;none&#x27;&quot;&gt;&lt;/div&gt;&lt;div class=&quot;mg-item mg-img&quot;&gt;&lt;img src=&quot;https://drive.google.com/uc?export=view&amp;id=1YdqTJSMpRiWyLxEKpMwLIhFxYszENJFL&quot; loading=&quot;lazy&quot; onerror=&quot;this.parentElement.style.display=&#x27;none&#x27;&quot;&gt;&lt;/div&gt;&lt;div class=&quot;mg-item mg-img&quot;&gt;&lt;img src=&quot;https://drive.google.com/uc?export=view&amp;id=1tR1m3kE2hRVggrdQouuNkIMIMvtBfFgb&quot; loading=&quot;lazy&quot; onerror=&quot;this.parentElement.style.display=&#x27;none&#x27;&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;modal-section&quot;&gt;&lt;div class=&quot;modal-section-head&quot;&gt;Challenge&lt;/div&gt;&lt;div class=&quot;modal-text&quot;&gt;In Vietnam&#x27;s fiercely competitive banking landscape, Techcombank faces a multi-fronted challenge: sustaining brand momentum under &quot;Be Greater,&quot; aiming to Main Bank &amp;amp; CASA leadership, while driving product purchase across a diverse portfolio - from Auto Earning and Merchant to Private &amp;amp; Priority - spanning NTB to ETB, Mass to UHNW, individual to Business and Corporate segments.&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;modal-divider&quot;&gt;&lt;/div&gt;&lt;div class=&quot;modal-section&quot;&gt;&lt;div class=&quot;modal-section-head&quot;&gt;Solution&lt;/div&gt;&lt;div class=&quot;modal-text&quot;&gt;Developed &lt;strong&gt;distinct GTM strategies for each audience tier and product&lt;/strong&gt;, starting from each segment&#x27;s unique tensions and decision drivers.&lt;br&gt;&lt;br&gt;Each strategy was designed to pioneer and set market trends, sharpen Techcombank&#x27;s competitive edge, while ensuring business connectivity and scalability to drive conversion performance.&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;modal-divider&quot;&gt;&lt;/div&gt;&lt;div class=&quot;modal-role&quot;&gt;• Contributing to GTM strategic planning &amp;amp; Leading GTM social planning&lt;br&gt;• In charge of quarterly market &amp;amp; marketing strategic intelligence reports &amp;amp; meetings - covering marketing actions on brand, retail banking, key product, sponsorship &amp;amp; partnership - to inform executive decision-making.&lt;/div&gt;" onclick="openModal(this)">
+      <div class="case-thumb">
+        <img src="https://drive.google.com/uc?export=view&id=1jH4K1aoGjTm_29ZwREyVcrDADfEXVjdn" loading="lazy" alt="Techcombank - Retail Banking Group" onerror="this.parentElement.style.background='#e9f5ea'">
+        <div class="case-thumb-overlay"><span>Read more</span></div>
+      </div>
+      <div class="case-body">
+        <div class="case-cat">Finance &amp; Banking</div>
+        <div class="case-client">Techcombank - Retail Banking Group</div>
+        <div class="case-title">GTM STRATEGY 2025</div>
+        <div class="case-challenge-preview">In Vietnam's fiercely competitive banking landscape, Techcombank faces a multi-fronted challenge: sustaining brand momentum under "Be Greater," aiming to Main Bank &amp; CASA leadership, while driving product purchase across a diverse portfolio.</div>
+        <div class="case-footer">
+          <span class="case-year">2025</span>
+          <span class="case-read-more">Read more →</span>
+        </div>
+      </div>
+    </div>
+    <div class="case-card visible" data-cat="Finance & Banking" data-modal="&lt;div class=&quot;modal-cat&quot;&gt;Finance &amp;amp; Banking&lt;/div&gt;&lt;div class=&quot;modal-client&quot;&gt;MBBank - BIZ MBBank&lt;/div&gt;&lt;div class=&quot;modal-title&quot;&gt;SOCIAL STRATEGY 2025&lt;/div&gt;&lt;div class=&quot;modal-gallery&quot;&gt;&lt;div class=&quot;mg-item mg-img&quot;&gt;&lt;img src=&quot;https://drive.google.com/uc?export=view&amp;id=1E99mNud0A4z-pqkVFWO3kl1QOy5066WK&quot; loading=&quot;lazy&quot; onerror=&quot;this.parentElement.style.display=&#x27;none&#x27;&quot;&gt;&lt;/div&gt;&lt;div class=&quot;mg-item mg-img&quot;&gt;&lt;img src=&quot;https://drive.google.com/uc?export=view&amp;id=1YtqnAEJOfxBm8-Gy-zg5TxPfez9LZBzu&quot; loading=&quot;lazy&quot; onerror=&quot;this.parentElement.style.display=&#x27;none&#x27;&quot;&gt;&lt;/div&gt;&lt;div class=&quot;mg-item mg-img&quot;&gt;&lt;img src=&quot;https://drive.google.com/uc?export=view&amp;id=1X33HxwdbMH2Ke4oa1rdJSQWHlaVn6JcA&quot; loading=&quot;lazy&quot; onerror=&quot;this.parentElement.style.display=&#x27;none&#x27;&quot;&gt;&lt;/div&gt;&lt;div class=&quot;mg-item mg-img&quot;&gt;&lt;img src=&quot;https://drive.google.com/uc?export=view&amp;id=1L8Wjug4owkv_Hd-aBUqUHM1r_-_Gzfm2&quot; loading=&quot;lazy&quot; onerror=&quot;this.parentElement.style.display=&#x27;none&#x27;&quot;&gt;&lt;/div&gt;&lt;div class=&quot;mg-item mg-img&quot;&gt;&lt;img src=&quot;https://drive.google.com/uc?export=view&amp;id=1r6Ef6Jll0399NgV7-89583SIFzK1Cpod&quot; loading=&quot;lazy&quot; onerror=&quot;this.parentElement.style.display=&#x27;none&#x27;&quot;&gt;&lt;/div&gt;&lt;div class=&quot;mg-item mg-img&quot;&gt;&lt;img src=&quot;https://drive.google.com/uc?export=view&amp;id=1X0ls5rxbj3x_WGCDW4l7cMZzQy_fbEDu&quot; loading=&quot;lazy&quot; onerror=&quot;this.parentElement.style.display=&#x27;none&#x27;&quot;&gt;&lt;/div&gt;&lt;div class=&quot;mg-item mg-img&quot;&gt;&lt;img src=&quot;https://drive.google.com/uc?export=view&amp;id=1RXCLussfViblbaPEjhOBXzlRdeVSMe6g&quot; loading=&quot;lazy&quot; onerror=&quot;this.parentElement.style.display=&#x27;none&#x27;&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;modal-section&quot;&gt;&lt;div class=&quot;modal-section-head&quot;&gt;Challenge&lt;/div&gt;&lt;div class=&quot;modal-text&quot;&gt;In a crowded banking landscape, BIZ MBBank needed to evolve - shifting from a growth strategy driven by user acquisition toward one built on quality, retention, and a stronger brand perception as a comprehensive financial partner for SMEs &amp;amp; businesses.&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;modal-divider&quot;&gt;&lt;/div&gt;&lt;div class=&quot;modal-section&quot;&gt;&lt;div class=&quot;modal-section-head&quot;&gt;Solution&lt;/div&gt;&lt;div class=&quot;modal-text&quot;&gt;&lt;strong&gt;Strategy:&lt;/strong&gt; Reposition BIZ MBBank from a banking product to a comprehensive financial partner - one that &lt;strong&gt;grows alongside SME businesses.&lt;/strong&gt;&lt;br&gt;&lt;br&gt;&lt;strong&gt;Creative:&lt;/strong&gt; A social-first campaign replacing traditional banking ads with dynamic formats, interactive content &amp;amp; real SME success stories - building emotional connection and driving long-term loyalty.&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;modal-divider&quot;&gt;&lt;/div&gt;&lt;div class=&quot;modal-role&quot;&gt;Led strategic social strategy&lt;/div&gt;" onclick="openModal(this)">
+      <div class="case-thumb">
+        <img src="https://drive.google.com/uc?export=view&id=1E99mNud0A4z-pqkVFWO3kl1QOy5066WK" loading="lazy" alt="MBBank - BIZ MBBank" onerror="this.parentElement.style.background='#e9f5ea'">
+        <div class="case-thumb-overlay"><span>Read more</span></div>
+      </div>
+      <div class="case-body">
+        <div class="case-cat">Finance &amp; Banking</div>
+        <div class="case-client">MBBank - BIZ MBBank</div>
+        <div class="case-title">SOCIAL STRATEGY 2025</div>
+        <div class="case-challenge-preview">In a crowded banking landscape, BIZ MBBank needed to evolve - shifting from a growth strategy driven by user acquisition toward one built on quality, retention, and a stronger brand perception as a comprehensive financial partner for SMEs &amp; businesses.</div>
+        <div class="case-footer">
+          <span class="case-year">2025</span>
+          <span class="case-read-more">Read more →</span>
+        </div>
+      </div>
+    </div>
+    <div class="case-card visible" data-cat="Finance & Banking" data-modal="&lt;div class=&quot;modal-cat&quot;&gt;Finance &amp;amp; Banking&lt;/div&gt;&lt;div class=&quot;modal-client&quot;&gt;Mastercard x VPBank - Step Up x One Piece&lt;/div&gt;&lt;div class=&quot;modal-title&quot;&gt;IMC SOCIAL-LED STRATEGY 2025&lt;/div&gt;&lt;div class=&quot;modal-gallery&quot;&gt;&lt;div class=&quot;mg-item mg-img&quot;&gt;&lt;img src=&quot;https://drive.google.com/uc?export=view&amp;id=1gOw0z78yI-HIdn6zOfBwbdxIcCV8fHhW&quot; loading=&quot;lazy&quot; onerror=&quot;this.parentElement.style.display=&#x27;none&#x27;&quot;&gt;&lt;/div&gt;&lt;div class=&quot;mg-item mg-img&quot;&gt;&lt;img src=&quot;https://drive.google.com/uc?export=view&amp;id=19aNP24nxyybXQffmmoOrx5n9KpY01cq6&quot; loading=&quot;lazy&quot; onerror=&quot;this.parentElement.style.display=&#x27;none&#x27;&quot;&gt;&lt;/div&gt;&lt;div class=&quot;mg-item mg-img&quot;&gt;&lt;img src=&quot;https://drive.google.com/uc?export=view&amp;id=1IuwfxTwqv8A5t2iYs7GYejpTP5DsO94C&quot; loading=&quot;lazy&quot; onerror=&quot;this.parentElement.style.display=&#x27;none&#x27;&quot;&gt;&lt;/div&gt;&lt;div class=&quot;mg-item mg-img&quot;&gt;&lt;img src=&quot;https://drive.google.com/uc?export=view&amp;id=1RaspYdxbSKLucLF17Mz-kim6o1DZWUMo&quot; loading=&quot;lazy&quot; onerror=&quot;this.parentElement.style.display=&#x27;none&#x27;&quot;&gt;&lt;/div&gt;&lt;div class=&quot;mg-item mg-img&quot;&gt;&lt;img src=&quot;https://drive.google.com/uc?export=view&amp;id=1Z55Ghj9iLTt6dODhNtkQRQQ9g1Ey5soZ&quot; loading=&quot;lazy&quot; onerror=&quot;this.parentElement.style.display=&#x27;none&#x27;&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;modal-section&quot;&gt;&lt;div class=&quot;modal-section-head&quot;&gt;Challenge&lt;/div&gt;&lt;div class=&quot;modal-text&quot;&gt;In a market where brands increasingly compete for Gen Z attention through subculture and IP collaborations, VPBank Mastercard needed to do more than launch a new card - it needed to &lt;strong&gt;break through the noise, maximize relevancy within big subculture community&lt;/strong&gt; like the One Piece fandom, and turn that cultural connection into measurable acquisition.&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;modal-divider&quot;&gt;&lt;/div&gt;&lt;div class=&quot;modal-section&quot;&gt;&lt;div class=&quot;modal-section-head&quot;&gt;Solution&lt;/div&gt;&lt;div class=&quot;modal-text&quot;&gt;&lt;strong&gt;Strategy:&lt;/strong&gt; Identified the strategic intersection between Gen Z&#x27;s core value need - individuality - and One Piece&#x27;s brand equity as a symbol and voice of individuality. This unlocked the positioning: &lt;strong&gt;an iconic financial solution with One Piece character endorsement, approaching younger consumers through values &amp;amp; aspiration resonating&lt;/strong&gt; rather than product features.&lt;br&gt;&lt;br&gt;&lt;strong&gt;Creative:&lt;/strong&gt; Transformed financial product into a &lt;strong&gt;fandom-powered collectible&lt;/strong&gt; - character-themed card designs became coveted collector&#x27;s items, bespoke limited-edition One Piece merchandise generated acquisition FOMO, and &lt;strong&gt;fandom-driven social content&lt;/strong&gt; sparked community conversation and shared excitement across touchpoints.&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;modal-divider&quot;&gt;&lt;/div&gt;&lt;div class=&quot;modal-role&quot;&gt;Led strategic social strategy&lt;/div&gt;" onclick="openModal(this)">
+      <div class="case-thumb">
+        <img src="https://drive.google.com/uc?export=view&id=1gOw0z78yI-HIdn6zOfBwbdxIcCV8fHhW" loading="lazy" alt="Mastercard x VPBank - Step Up x One Piece" onerror="this.parentElement.style.background='#e9f5ea'">
+        <div class="case-thumb-overlay"><span>Read more</span></div>
+      </div>
+      <div class="case-body">
+        <div class="case-cat">Finance &amp; Banking</div>
+        <div class="case-client">Mastercard x VPBank - Step Up x One Piece</div>
+        <div class="case-title">IMC SOCIAL-LED STRATEGY 2025</div>
+        <div class="case-challenge-preview">VPBank Mastercard needed to break through the noise, maximize relevancy within big subculture community like the One Piece fandom, and turn that cultural connection into measurable acquisition.</div>
+        <div class="case-footer">
+          <span class="case-year">2025</span>
+          <span class="case-read-more">Read more →</span>
+        </div>
+      </div>
+    </div>
+    <div class="case-card visible" data-cat="Insurance" data-modal="&lt;div class=&quot;modal-cat&quot;&gt;Insurance&lt;/div&gt;&lt;div class=&quot;modal-client&quot;&gt;Prudential Vietnam&lt;/div&gt;&lt;div class=&quot;modal-title&quot;&gt;FULL-YEAR PR RETAINER &amp;amp; IMC STRATEGY FOR PRODUCT LAUNCH 2019 - 2020&lt;/div&gt;&lt;div class=&quot;modal-gallery&quot;&gt;&lt;div class=&quot;mg-item mg-img&quot;&gt;&lt;img src=&quot;https://drive.google.com/uc?export=view&amp;id=1HyHOstdB0edAtQGgUQF3oQjGCHF6hoG0&quot; loading=&quot;lazy&quot; onerror=&quot;this.parentElement.style.display=&#x27;none&#x27;&quot;&gt;&lt;/div&gt;&lt;div class=&quot;mg-item mg-img&quot;&gt;&lt;img src=&quot;https://drive.google.com/uc?export=view&amp;id=1aEATei6LvMwmNADht5buFzWL4TPpF1mk&quot; loading=&quot;lazy&quot; onerror=&quot;this.parentElement.style.display=&#x27;none&#x27;&quot;&gt;&lt;/div&gt;&lt;div class=&quot;mg-item mg-img&quot;&gt;&lt;img src=&quot;https://drive.google.com/uc?export=view&amp;id=1DSLyuKDsS6kJfyEBO1as7trs5vgWb4eu&quot; loading=&quot;lazy&quot; onerror=&quot;this.parentElement.style.display=&#x27;none&#x27;&quot;&gt;&lt;/div&gt;&lt;div class=&quot;mg-item mg-img&quot;&gt;&lt;img src=&quot;https://drive.google.com/uc?export=view&amp;id=1XewrWvtSLBVzJ6BXkAsVnKmOEzSu3njj&quot; loading=&quot;lazy&quot; onerror=&quot;this.parentElement.style.display=&#x27;none&#x27;&quot;&gt;&lt;/div&gt;&lt;div class=&quot;mg-item mg-img&quot;&gt;&lt;img src=&quot;https://drive.google.com/uc?export=view&amp;id=1RJgftyndpOr2PpUHzqwT84alT0-beXJf&quot; loading=&quot;lazy&quot; onerror=&quot;this.parentElement.style.display=&#x27;none&#x27;&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;modal-section&quot;&gt;&lt;div class=&quot;modal-section-head&quot;&gt;Challenge&lt;/div&gt;&lt;div class=&quot;modal-text&quot;&gt;Insurance remains a category with significant gaps across awareness, consideration, and purchase - driven by low financial literacy, trust barriers, and limited emotional connection. For Prudential, this meant sustained effort across multiple fronts simultaneously: &lt;strong&gt;building brand credibility, driving product consideration, and even supporting agent recruitment&lt;/strong&gt; - all within a dynamic and increasingly competitive market.&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;modal-divider&quot;&gt;&lt;/div&gt;&lt;div class=&quot;modal-section&quot;&gt;&lt;div class=&quot;modal-section-head&quot;&gt;Solution&lt;/div&gt;&lt;div class=&quot;modal-text&quot;&gt;&lt;strong&gt;Strategy:&lt;/strong&gt; Positioned Prudential as the role model in Vietnam&#x27;s life insurance industry - &lt;strong&gt;building public trust through PVA success stories&lt;/strong&gt; while creating synergy across corporate, marketing, and CSR activities to serve both brand and business objectives.&lt;br&gt;&lt;br&gt;&lt;strong&gt;Deliverables platform:&lt;/strong&gt; An always-on PR and communications engine spanning media relationship building, crisis management readiness, and integrated product launch campaigns with PR &amp;amp; Social emerging &amp;amp; disruptive formats to this category.&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;modal-divider&quot;&gt;&lt;/div&gt;&lt;div class=&quot;modal-section&quot;&gt;&lt;div class=&quot;modal-section-head&quot;&gt;Results&lt;/div&gt;&lt;div class=&quot;modal-results&quot;&gt;&lt;div&gt;&lt;div class=&quot;modal-stat-num&quot;&gt;3,184&lt;/div&gt;&lt;div class=&quot;modal-stat-label&quot;&gt;PR outcomes 2019 · PR Value 40.79B VND &amp;amp; 227% ROI&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div class=&quot;modal-stat-num&quot;&gt;2,788&lt;/div&gt;&lt;div class=&quot;modal-stat-label&quot;&gt;PR outcomes 2020 · PR Value 35.68B VND &amp;amp; 229% ROI&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;modal-divider&quot;&gt;&lt;/div&gt;&lt;div class=&quot;modal-role&quot;&gt;• Led IMC strategy planning for product launch (Healthcare Rider)&lt;br&gt;• Contributing to retainer&#x27;s PR strategy planning and execution.&lt;/div&gt;" onclick="openModal(this)">
+      <div class="case-thumb">
+        <img src="https://drive.google.com/uc?export=view&id=1HyHOstdB0edAtQGgUQF3oQjGCHF6hoG0" loading="lazy" alt="Prudential Vietnam" onerror="this.parentElement.style.background='#e9f5ea'">
+        <div class="case-thumb-overlay"><span>Read more</span></div>
+      </div>
+      <div class="case-body">
+        <div class="case-cat">Insurance</div>
+        <div class="case-client">Prudential Vietnam</div>
+        <div class="case-title">FULL-YEAR PR RETAINER &amp; IMC STRATEGY FOR PRODUCT LAUNCH 2019 - 2020</div>
+        <div class="case-challenge-preview">Insurance remains a category with significant gaps across awareness, consideration, and purchase - driven by low financial literacy, trust barriers, and limited emotional connection.</div>
+        <div class="case-footer">
+          <span class="case-year">2019–2020</span>
+          <span class="case-read-more">Read more →</span>
+        </div>
+      </div>
+    </div>
+    <div class="case-card visible" data-cat="Insurance" data-modal="&lt;div class=&quot;modal-cat&quot;&gt;Insurance&lt;/div&gt;&lt;div class=&quot;modal-client&quot;&gt;Hanwha Life Vietnam&lt;/div&gt;&lt;div class=&quot;modal-title&quot;&gt;IMC STRATEGY 2025 - &quot;LUÔN HÂN HOAN&quot;&lt;/div&gt;&lt;div class=&quot;modal-gallery&quot;&gt;&lt;div class=&quot;mg-item mg-img&quot;&gt;&lt;img src=&quot;https://drive.google.com/uc?export=view&amp;id=1MManss1V0H7U0Ss9m1i-JYQfk5_nrpcJ&quot; loading=&quot;lazy&quot; onerror=&quot;this.parentElement.style.display=&#x27;none&#x27;&quot;&gt;&lt;/div&gt;&lt;div class=&quot;mg-item mg-img&quot;&gt;&lt;img src=&quot;https://drive.google.com/uc?export=view&amp;id=1JqhlSEeluKe-NZs4tHCHWMBsuo4v4nWs&quot; loading=&quot;lazy&quot; onerror=&quot;this.parentElement.style.display=&#x27;none&#x27;&quot;&gt;&lt;/div&gt;&lt;div class=&quot;mg-item mg-img&quot;&gt;&lt;img src=&quot;https://drive.google.com/uc?export=view&amp;id=1QU8k5XVFwGBS2prMfg2h0BC1okfBqS-f&quot; loading=&quot;lazy&quot; onerror=&quot;this.parentElement.style.display=&#x27;none&#x27;&quot;&gt;&lt;/div&gt;&lt;div class=&quot;mg-item mg-img&quot;&gt;&lt;img src=&quot;https://drive.google.com/uc?export=view&amp;id=1m8uKSil_RlEhaSrlw2pf6hFy2Bvm24F9&quot; loading=&quot;lazy&quot; onerror=&quot;this.parentElement.style.display=&#x27;none&#x27;&quot;&gt;&lt;/div&gt;&lt;div class=&quot;mg-item mg-img&quot;&gt;&lt;img src=&quot;https://drive.google.com/uc?export=view&amp;id=1llIZpRPQcbtCsX4m55tLN_W3odNCyxEb&quot; loading=&quot;lazy&quot; onerror=&quot;this.parentElement.style.display=&#x27;none&#x27;&quot;&gt;&lt;/div&gt;&lt;div class=&quot;mg-item mg-img&quot;&gt;&lt;img src=&quot;https://drive.google.com/uc?export=view&amp;id=1omBeNcuihxA_XgrQuP5hpd7ztCdO7I_L&quot; loading=&quot;lazy&quot; onerror=&quot;this.parentElement.style.display=&#x27;none&#x27;&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;modal-section&quot;&gt;&lt;div class=&quot;modal-section-head&quot;&gt;Challenge&lt;/div&gt;&lt;div class=&quot;modal-text&quot;&gt;In a life insurance market where top players were investing heavily in brand awareness, Hanwha Life struggled to build &lt;strong&gt;meaningful &amp;amp; distinctive brand recognition&lt;/strong&gt; in Vietnam.&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;modal-divider&quot;&gt;&lt;/div&gt;&lt;div class=&quot;modal-section&quot;&gt;&lt;div class=&quot;modal-section-head&quot;&gt;Solution&lt;/div&gt;&lt;div class=&quot;modal-text&quot;&gt;&lt;strong&gt;Strategy:&lt;/strong&gt; Built a ownable communication platform around the idea of &quot;enjoy more, worry less&quot; - &lt;strong&gt;leveraging Hanwha&#x27;s Korean origin as a distinctive brand signature&lt;/strong&gt; rather than a generic differentiator.&lt;br&gt;&lt;br&gt;&lt;strong&gt;Creative:&lt;/strong&gt; &quot;Luôn Hân Hoan với Hanwha&quot; - a wordplay that mirrors the brand name while embodying a joyful attitude toward life. Brought to life through &lt;strong&gt;a full K-culture immersion&lt;/strong&gt;: K-beauty visuals, a K-pop brand jingle, and K-drama storytelling - extended across social through contextual content, a TikTok dance challenge, and influencer amplification.&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;modal-divider&quot;&gt;&lt;/div&gt;&lt;div class=&quot;modal-section&quot;&gt;&lt;div class=&quot;modal-section-head&quot;&gt;Results&lt;/div&gt;&lt;div class=&quot;modal-results&quot;&gt;&lt;div&gt;&lt;div class=&quot;modal-stat-num&quot;&gt;1M&lt;/div&gt;&lt;div class=&quot;modal-stat-label&quot;&gt;Reach &amp;amp; 2M engagement on social outreach channels&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div class=&quot;modal-stat-num&quot;&gt;6M&lt;/div&gt;&lt;div class=&quot;modal-stat-label&quot;&gt;YouTube views in first 2 months&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div class=&quot;modal-stat-num&quot;&gt;Top 5&lt;/div&gt;&lt;div class=&quot;modal-stat-label&quot;&gt;Brands with highest brand awareness in Vietnam&#x27;s life insurance market&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div class=&quot;modal-stat-num&quot;&gt;95%&lt;/div&gt;&lt;div class=&quot;modal-stat-label&quot;&gt;Of reached consumers could identify Hanwha Life as a Korean brand&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;modal-divider&quot;&gt;&lt;/div&gt;&lt;div class=&quot;modal-role&quot;&gt;Contributing to integrated planning by leading PR &amp;amp; Social planning development&lt;/div&gt;" onclick="openModal(this)">
+      <div class="case-thumb">
+        <img src="https://drive.google.com/uc?export=view&id=1MManss1V0H7U0Ss9m1i-JYQfk5_nrpcJ" loading="lazy" alt="Hanwha Life Vietnam" onerror="this.parentElement.style.background='#e9f5ea'">
+        <div class="case-thumb-overlay"><span>Read more</span></div>
+      </div>
+      <div class="case-body">
+        <div class="case-cat">Insurance</div>
+        <div class="case-client">Hanwha Life Vietnam</div>
+        <div class="case-title">IMC STRATEGY 2025 - "LUÔN HÂN HOAN"</div>
+        <div class="case-challenge-preview">In a life insurance market where top players were investing heavily in brand awareness, Hanwha Life struggled to build meaningful &amp; distinctive brand recognition in Vietnam.</div>
+        <div class="case-footer">
+          <span class="case-year">2025</span>
+          <span class="case-read-more">Read more →</span>
+        </div>
+      </div>
+    </div>
+    <div class="case-card visible" data-cat="FMCG" data-modal="&lt;div class=&quot;modal-cat&quot;&gt;FMCG&lt;/div&gt;&lt;div class=&quot;modal-client&quot;&gt;Ajinomoto Vietnam&lt;/div&gt;&lt;div class=&quot;modal-title&quot;&gt;GTM STRATEGY FOR KHO QUẸT LAUNCHING 2023&lt;/div&gt;&lt;div class=&quot;modal-gallery&quot;&gt;&lt;div class=&quot;mg-item mg-img&quot;&gt;&lt;img src=&quot;https://drive.google.com/uc?export=view&amp;id=1gWEFrQ4Cd-V2slLn7b80wB2jBE4U5Y9d&quot; loading=&quot;lazy&quot; onerror=&quot;this.parentElement.style.display=&#x27;none&#x27;&quot;&gt;&lt;/div&gt;&lt;div class=&quot;mg-item mg-img&quot;&gt;&lt;img src=&quot;https://drive.google.com/uc?export=view&amp;id=1ftdVFQ7fCRHTqXE6WEvb0CK8mB1x5E4w&quot; loading=&quot;lazy&quot; onerror=&quot;this.parentElement.style.display=&#x27;none&#x27;&quot;&gt;&lt;/div&gt;&lt;div class=&quot;mg-item mg-img&quot;&gt;&lt;img src=&quot;https://drive.google.com/uc?export=view&amp;id=1vyuFCRu_1amPGt2c8wXpELcXd1cONjqH&quot; loading=&quot;lazy&quot; onerror=&quot;this.parentElement.style.display=&#x27;none&#x27;&quot;&gt;&lt;/div&gt;&lt;div class=&quot;mg-item mg-img&quot;&gt;&lt;img src=&quot;https://drive.google.com/uc?export=view&amp;id=1_heCu9NNmet6LyRg2E5HjkI5F5A6pCvv&quot; loading=&quot;lazy&quot; onerror=&quot;this.parentElement.style.display=&#x27;none&#x27;&quot;&gt;&lt;/div&gt;&lt;div class=&quot;mg-item mg-video&quot;&gt;&lt;iframe src=&quot;https://drive.google.com/file/d/11IwJR4AqhNuKJoegnvIQu5N--vhSfXHy/preview&quot; frameborder=&quot;0&quot; allowfullscreen loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;&lt;div class=&quot;mg-item mg-img&quot;&gt;&lt;img src=&quot;https://drive.google.com/uc?export=view&amp;id=1fS2hZx1hGwE738sFA6cdDwW_z_ogLMS1&quot; loading=&quot;lazy&quot; onerror=&quot;this.parentElement.style.display=&#x27;none&#x27;&quot;&gt;&lt;/div&gt;&lt;div class=&quot;mg-item mg-img&quot;&gt;&lt;img src=&quot;https://drive.google.com/uc?export=view&amp;id=1tH0rnnt3Hr3t0zkBMxsngCK6SL3_2gk1&quot; loading=&quot;lazy&quot; onerror=&quot;this.parentElement.style.display=&#x27;none&#x27;&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;modal-section&quot;&gt;&lt;div class=&quot;modal-section-head&quot;&gt;Challenge&lt;/div&gt;&lt;div class=&quot;modal-text&quot;&gt;While Kho Quet is a familiar staple in Vietnamese cuisine, the ready-made category lacked strong branding and clear positioning. The real challenge: &lt;strong&gt;convincing consumers to trust a packaged version of something they&#x27;d always made at home&lt;/strong&gt; - and make it a daily essential.&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;modal-divider&quot;&gt;&lt;/div&gt;&lt;div class=&quot;modal-section&quot;&gt;&lt;div class=&quot;modal-section-head&quot;&gt;Solution&lt;/div&gt;&lt;div class=&quot;modal-text&quot;&gt;&lt;strong&gt;Strategy:&lt;/strong&gt; Rooted in a universal family insight - a mother&#x27;s pride in a perfect meal - &lt;strong&gt;to position Ajinomoto Kho Quẹt as the everyday companion for &quot;Always Perfect Meals,&quot;&lt;/strong&gt; making every dish effortlessly complete for her beloved ones.&lt;br&gt;&lt;br&gt;&lt;strong&gt;Creative:&lt;/strong&gt; Localized the &quot;Always Perfect Meals&quot; idea through a distinctly &lt;strong&gt;&quot;Miền Tây&quot; lens&lt;/strong&gt; - the familiar act of &quot;vét nồi&quot; with dynamic storytelling for emotional recall. Brought to life across pillars: packaging design validated through color psychology and eye-tracking for maximum shelf visibility; and social activities paired with instructional content to drive trial and daily integration.&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;modal-divider&quot;&gt;&lt;/div&gt;&lt;div class=&quot;modal-section&quot;&gt;&lt;div class=&quot;modal-section-head&quot;&gt;Results&lt;/div&gt;&lt;div class=&quot;modal-results&quot;&gt;&lt;div&gt;&lt;div class=&quot;modal-stat-num&quot;&gt;35M&lt;/div&gt;&lt;div class=&quot;modal-stat-label&quot;&gt;Impressions on Facebook&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div class=&quot;modal-stat-num&quot;&gt;5M&lt;/div&gt;&lt;div class=&quot;modal-stat-label&quot;&gt;Users reached on Facebook within 1 month&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div class=&quot;modal-stat-num&quot;&gt;85%&lt;/div&gt;&lt;div class=&quot;modal-stat-label&quot;&gt;Audience pool reached in HCMC&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div class=&quot;modal-stat-num&quot;&gt;13M&lt;/div&gt;&lt;div class=&quot;modal-stat-label&quot;&gt;Impressions on YouTube&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div class=&quot;modal-stat-num&quot;&gt;+6.16%&lt;/div&gt;&lt;div class=&quot;modal-stat-label&quot;&gt;Absolute lift in Brand Lift Survey (vs. 2% market norm)&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;modal-divider&quot;&gt;&lt;/div&gt;&lt;div class=&quot;modal-role&quot;&gt;Led strategic planning&lt;/div&gt;" onclick="openModal(this)">
+      <div class="case-thumb">
+        <img src="https://drive.google.com/uc?export=view&id=1gWEFrQ4Cd-V2slLn7b80wB2jBE4U5Y9d" loading="lazy" alt="Ajinomoto Vietnam" onerror="this.parentElement.style.background='#e9f5ea'">
+        <div class="case-thumb-overlay"><span>Read more</span></div>
+      </div>
+      <div class="case-body">
+        <div class="case-cat">FMCG</div>
+        <div class="case-client">Ajinomoto Vietnam</div>
+        <div class="case-title">GTM STRATEGY FOR KHO QUẸT LAUNCHING 2023</div>
+        <div class="case-challenge-preview">The real challenge: convincing consumers to trust a packaged version of something they'd always made at home - and make it a daily essential.</div>
+        <div class="case-footer">
+          <span class="case-year">2023</span>
+          <span class="case-read-more">Read more →</span>
+        </div>
+      </div>
+    </div>
+    <div class="case-card visible" data-cat="FMCG" data-modal="&lt;div class=&quot;modal-cat&quot;&gt;FMCG&lt;/div&gt;&lt;div class=&quot;modal-client&quot;&gt;Zespri Kiwifruit Vietnam&lt;/div&gt;&lt;div class=&quot;modal-title&quot;&gt;PR &amp;amp; SOCIAL RETAINER 2023 – 2024&lt;/div&gt;&lt;div class=&quot;modal-gallery&quot;&gt;&lt;div class=&quot;mg-item mg-img&quot;&gt;&lt;img src=&quot;https://drive.google.com/uc?export=view&amp;id=1xOf0n5m-nxMZZpmbrbvkIydZmBkji1xU&quot; loading=&quot;lazy&quot; onerror=&quot;this.parentElement.style.display=&#x27;none&#x27;&quot;&gt;&lt;/div&gt;&lt;div class=&quot;mg-item mg-img&quot;&gt;&lt;img src=&quot;https://drive.google.com/uc?export=view&amp;id=1VsVrXxLfrRPvBy856ZSokGW8w3EL13XV&quot; loading=&quot;lazy&quot; onerror=&quot;this.parentElement.style.display=&#x27;none&#x27;&quot;&gt;&lt;/div&gt;&lt;div class=&quot;mg-item mg-img&quot;&gt;&lt;img src=&quot;https://drive.google.com/uc?export=view&amp;id=1RRVElaw26-qDZjMgwmveTsYD0fNOFKhf&quot; loading=&quot;lazy&quot; onerror=&quot;this.parentElement.style.display=&#x27;none&#x27;&quot;&gt;&lt;/div&gt;&lt;div class=&quot;mg-item mg-img&quot;&gt;&lt;img src=&quot;https://drive.google.com/uc?export=view&amp;id=1QUieYhmau9InG7xS4LFYtbytLKXcCM_Z&quot; loading=&quot;lazy&quot; onerror=&quot;this.parentElement.style.display=&#x27;none&#x27;&quot;&gt;&lt;/div&gt;&lt;div class=&quot;mg-item mg-img&quot;&gt;&lt;img src=&quot;https://drive.google.com/uc?export=view&amp;id=1nOWvlnqKYk8wvN6Mo0ZtM_Et81YyLS3K&quot; loading=&quot;lazy&quot; onerror=&quot;this.parentElement.style.display=&#x27;none&#x27;&quot;&gt;&lt;/div&gt;&lt;div class=&quot;mg-item mg-img&quot;&gt;&lt;img src=&quot;https://drive.google.com/uc?export=view&amp;id=1GpC0QZmT17fGkAEef9asP9PnMAuqTtt3&quot; loading=&quot;lazy&quot; onerror=&quot;this.parentElement.style.display=&#x27;none&#x27;&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;modal-section&quot;&gt;&lt;div class=&quot;modal-section-head&quot;&gt;Challenge&lt;/div&gt;&lt;div class=&quot;modal-text&quot;&gt;As Vietnam&#x27;s health-consciousness and disposable income grew, Zespri – Australia Kiwifruit Brand - identified a timely opportunity to build category and brand power through deeper market penetration - &lt;strong&gt;making Zespri kiwifruit relevant to consumers&#x27; diverse health needs across all lifestyle segments.&lt;/strong&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;modal-divider&quot;&gt;&lt;/div&gt;&lt;div class=&quot;modal-section&quot;&gt;&lt;div class=&quot;modal-section-head&quot;&gt;Solution&lt;/div&gt;&lt;div class=&quot;modal-text&quot;&gt;&lt;strong&gt;Strategy:&lt;/strong&gt; &lt;strong&gt;Repositioned Zespri from a premium imported fruit to an irresistible holistic health ritual&lt;/strong&gt; by tapping into the universal struggle of daily energy dips.&lt;br&gt;&lt;br&gt;&lt;strong&gt;Creative:&lt;/strong&gt; Introducing &quot;C-needed time&quot; as the perfect moment to recharge with Zespri &amp;amp; activated &quot;Eat Superfruit, Load Super C&quot; through a &lt;strong&gt;three-layer influencer model&lt;/strong&gt;: healthcare professionals for credibility, family &amp;amp; kids KOLs for relatability, and Family Community for organic spread — supported by PR articles to build brand trust and share of voice.&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;modal-divider&quot;&gt;&lt;/div&gt;&lt;div class=&quot;modal-section&quot;&gt;&lt;div class=&quot;modal-section-head&quot;&gt;Results&lt;/div&gt;&lt;div class=&quot;modal-results&quot;&gt;&lt;div&gt;&lt;div class=&quot;modal-stat-num&quot;&gt;72.4M&lt;/div&gt;&lt;div class=&quot;modal-stat-label&quot;&gt;Total reach&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div class=&quot;modal-stat-num&quot;&gt;70M&lt;/div&gt;&lt;div class=&quot;modal-stat-label&quot;&gt;Total engagement&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div class=&quot;modal-stat-num&quot;&gt;12K&lt;/div&gt;&lt;div class=&quot;modal-stat-label&quot;&gt;Relevant buzz · 61 total exposures&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;modal-divider&quot;&gt;&lt;/div&gt;&lt;div class=&quot;modal-role&quot;&gt;Led strategic planning for PR &amp;amp; Social channel&lt;/div&gt;" onclick="openModal(this)">
+      <div class="case-thumb">
+        <img src="https://drive.google.com/uc?export=view&id=1xOf0n5m-nxMZZpmbrbvkIydZmBkji1xU" loading="lazy" alt="Zespri Kiwifruit Vietnam" onerror="this.parentElement.style.background='#e9f5ea'">
+        <div class="case-thumb-overlay"><span>Read more</span></div>
+      </div>
+      <div class="case-body">
+        <div class="case-cat">FMCG</div>
+        <div class="case-client">Zespri Kiwifruit Vietnam</div>
+        <div class="case-title">PR &amp; SOCIAL RETAINER 2023 – 2024</div>
+        <div class="case-challenge-preview">Zespri identified a timely opportunity to build category and brand power through deeper market penetration - making Zespri kiwifruit relevant to consumers' diverse health needs across all lifestyle segments.</div>
+        <div class="case-footer">
+          <span class="case-year">2023–2024</span>
+          <span class="case-read-more">Read more →</span>
+        </div>
+      </div>
+    </div>
+    <div class="case-card visible" data-cat="Beauty & Personal Care" data-modal="&lt;div class=&quot;modal-cat&quot;&gt;Beauty &amp;amp; Personal Care&lt;/div&gt;&lt;div class=&quot;modal-client&quot;&gt;L&#x27;Oréal Vietnam&lt;/div&gt;&lt;div class=&quot;modal-title&quot;&gt;BRAND STRATEGY FOR 3CE LOCAL BRAND PLATFORM 2025&lt;/div&gt;&lt;div class=&quot;modal-gallery&quot;&gt;&lt;div class=&quot;mg-item mg-img&quot;&gt;&lt;img src=&quot;https://drive.google.com/uc?export=view&amp;id=1pkpIlGYPvn4b2GudJw58AH8lP9bY0zs4&quot; loading=&quot;lazy&quot; onerror=&quot;this.parentElement.style.display=&#x27;none&#x27;&quot;&gt;&lt;/div&gt;&lt;div class=&quot;mg-item mg-img&quot;&gt;&lt;img src=&quot;https://drive.google.com/uc?export=view&amp;id=13xizMDF7_LdajZxo12Y8-yfbSdpGhzBa&quot; loading=&quot;lazy&quot; onerror=&quot;this.parentElement.style.display=&#x27;none&#x27;&quot;&gt;&lt;/div&gt;&lt;div class=&quot;mg-item mg-img&quot;&gt;&lt;img src=&quot;https://drive.google.com/uc?export=view&amp;id=1pVrk3O8YupFDWPj5GWVJ86yEOdYGeCii&quot; loading=&quot;lazy&quot; onerror=&quot;this.parentElement.style.display=&#x27;none&#x27;&quot;&gt;&lt;/div&gt;&lt;div class=&quot;mg-item mg-video&quot;&gt;&lt;iframe src=&quot;https://drive.google.com/file/d/1SInfJPEBEOuO8wpm8MbAeBdbkXw0XvqC/preview&quot; frameborder=&quot;0&quot; allowfullscreen loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;&lt;div class=&quot;mg-item mg-video&quot;&gt;&lt;iframe src=&quot;https://drive.google.com/file/d/1S-Lxgiqz9DUWPv7sTWGlQjiOdkysnj7g/preview&quot; frameborder=&quot;0&quot; allowfullscreen loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;&lt;div class=&quot;mg-item mg-img&quot;&gt;&lt;img src=&quot;https://drive.google.com/uc?export=view&amp;id=11m81oKlsuW9gmFMEKhLvCTfQ4BVFgzC7&quot; loading=&quot;lazy&quot; onerror=&quot;this.parentElement.style.display=&#x27;none&#x27;&quot;&gt;&lt;/div&gt;&lt;div class=&quot;mg-item mg-img&quot;&gt;&lt;img src=&quot;https://drive.google.com/uc?export=view&amp;id=1xXhmXYC2__Vyliu0ZBHBylz7sv99PNNc&quot; loading=&quot;lazy&quot; onerror=&quot;this.parentElement.style.display=&#x27;none&#x27;&quot;&gt;&lt;/div&gt;&lt;div class=&quot;mg-item mg-img&quot;&gt;&lt;img src=&quot;https://drive.google.com/uc?export=view&amp;id=1JZa0eNUO564Kur0UgtpO_aHk2bCznBCz&quot; loading=&quot;lazy&quot; onerror=&quot;this.parentElement.style.display=&#x27;none&#x27;&quot;&gt;&lt;/div&gt;&lt;div class=&quot;mg-item mg-img&quot;&gt;&lt;img src=&quot;https://drive.google.com/uc?export=view&amp;id=1vaiffcj2TDiAGXMm_ONJ5rJu-jK0J2ga&quot; loading=&quot;lazy&quot; onerror=&quot;this.parentElement.style.display=&#x27;none&#x27;&quot;&gt;&lt;/div&gt;&lt;div class=&quot;mg-item mg-img&quot;&gt;&lt;img src=&quot;https://drive.google.com/uc?export=view&amp;id=1HpzdSc8aZ0ecow9uzCpsiWEEzErCrlEq&quot; loading=&quot;lazy&quot; onerror=&quot;this.parentElement.style.display=&#x27;none&#x27;&quot;&gt;&lt;/div&gt;&lt;div class=&quot;mg-item mg-img&quot;&gt;&lt;img src=&quot;https://drive.google.com/uc?export=view&amp;id=1rjvCfaYCx4OPGPok3w6KvYZWRNGNr0Gm&quot; loading=&quot;lazy&quot; onerror=&quot;this.parentElement.style.display=&#x27;none&#x27;&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;modal-section&quot;&gt;&lt;div class=&quot;modal-section-head&quot;&gt;Challenge&lt;/div&gt;&lt;div class=&quot;modal-text&quot;&gt;In a beauty market increasingly fragmented by low-tier Korean and Chinese competitors, 3CE needed to establish a long-term local brand platform with their official landing in Vietnam as L&#x27;Oreal Paris&#x27; franchise - &lt;strong&gt;securing category entry points beyond its Lip stronghold&lt;/strong&gt;, attracting non-brand consumers, and building a premium yet aspirational image relevant to Zillennials.&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;modal-divider&quot;&gt;&lt;/div&gt;&lt;div class=&quot;modal-section&quot;&gt;&lt;div class=&quot;modal-section-head&quot;&gt;Solution&lt;/div&gt;&lt;div class=&quot;modal-text&quot;&gt;&lt;strong&gt;Strategy:&lt;/strong&gt; Empowering Millennials and Gen Z to be &lt;strong&gt;&quot;Open to Spontaneous&quot;&lt;/strong&gt; - embracing spontaneity through aspirational yet accessible color mastery, championing self-expression as 3CE&#x27;s core brand equity in Vietnam.&lt;br&gt;&lt;br&gt;&lt;strong&gt;Creative:&lt;/strong&gt; &lt;strong&gt;&quot;3ật sắC Em&quot;&lt;/strong&gt; - a local brand platform that transforms 3CE from a product brand into a fandom for beauty enthusiasts. Built around two pillars: 3and Chị Em, a vibrant community where trendsetters explore and celebrate beauty their own way; and 3ar Chị Em, a dedicated space fostering a movement around color mastery and self-expression.&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;modal-divider&quot;&gt;&lt;/div&gt;&lt;div class=&quot;modal-role&quot;&gt;Led brand strategy and intergrated planning development.&lt;/div&gt;" onclick="openModal(this)">
+      <div class="case-thumb">
+        <img src="https://drive.google.com/uc?export=view&id=1pkpIlGYPvn4b2GudJw58AH8lP9bY0zs4" loading="lazy" alt="L'Oréal Vietnam" onerror="this.parentElement.style.background='#e9f5ea'">
+        <div class="case-thumb-overlay"><span>Read more</span></div>
+      </div>
+      <div class="case-body">
+        <div class="case-cat">Beauty &amp; Personal Care</div>
+        <div class="case-client">L'Oréal Vietnam</div>
+        <div class="case-title">BRAND STRATEGY FOR 3CE LOCAL BRAND PLATFORM 2025</div>
+        <div class="case-challenge-preview">3CE needed to establish a long-term local brand platform - securing category entry points beyond its Lip stronghold, attracting non-brand consumers, and building a premium yet aspirational image relevant to Zillennials.</div>
+        <div class="case-footer">
+          <span class="case-year">2025</span>
+          <span class="case-read-more">Read more →</span>
+        </div>
+      </div>
+    </div>
+    <div class="case-card visible" data-cat="Beauty & Personal Care" data-modal="&lt;div class=&quot;modal-cat&quot;&gt;Beauty &amp;amp; Personal Care&lt;/div&gt;&lt;div class=&quot;modal-client&quot;&gt;L&#x27;Oréal Paris Vietnam&lt;/div&gt;&lt;div class=&quot;modal-title&quot;&gt;IMC SOCIAL-LED STRATEGY FOR GLYCOLIC BRIGHT SERUM LAUNCHING 2024&lt;/div&gt;&lt;div class=&quot;modal-gallery&quot;&gt;&lt;div class=&quot;mg-item mg-img&quot;&gt;&lt;img src=&quot;https://drive.google.com/uc?export=view&amp;id=1Vq-Wigp6-ryAwwQc3d_wOCFzt0M9xzTr&quot; loading=&quot;lazy&quot; onerror=&quot;this.parentElement.style.display=&#x27;none&#x27;&quot;&gt;&lt;/div&gt;&lt;div class=&quot;mg-item mg-img&quot;&gt;&lt;img src=&quot;https://drive.google.com/uc?export=view&amp;id=1TJK-va00MIGoDcCFjuyFmm2Vw1j08bu8&quot; loading=&quot;lazy&quot; onerror=&quot;this.parentElement.style.display=&#x27;none&#x27;&quot;&gt;&lt;/div&gt;&lt;div class=&quot;mg-item mg-img&quot;&gt;&lt;img src=&quot;https://drive.google.com/uc?export=view&amp;id=1edYFV5j8coieWlW0gi-CYEnkjZm2JgVF&quot; loading=&quot;lazy&quot; onerror=&quot;this.parentElement.style.display=&#x27;none&#x27;&quot;&gt;&lt;/div&gt;&lt;div class=&quot;mg-item mg-img&quot;&gt;&lt;img src=&quot;https://drive.google.com/uc?export=view&amp;id=1OHHyMO5rnvY6kuxM82K0ctNBhig8CwIg&quot; loading=&quot;lazy&quot; onerror=&quot;this.parentElement.style.display=&#x27;none&#x27;&quot;&gt;&lt;/div&gt;&lt;div class=&quot;mg-item mg-img&quot;&gt;&lt;img src=&quot;https://drive.google.com/uc?export=view&amp;id=1ve4tK6JIw2Vi019oJ1APItvoAzrVzCek&quot; loading=&quot;lazy&quot; onerror=&quot;this.parentElement.style.display=&#x27;none&#x27;&quot;&gt;&lt;/div&gt;&lt;div class=&quot;mg-item mg-img&quot;&gt;&lt;img src=&quot;https://drive.google.com/uc?export=view&amp;id=1oeacKfQqFi0x54SG41ihRg6wPQdYPxJP&quot; loading=&quot;lazy&quot; onerror=&quot;this.parentElement.style.display=&#x27;none&#x27;&quot;&gt;&lt;/div&gt;&lt;div class=&quot;mg-item mg-video&quot;&gt;&lt;iframe src=&quot;https://drive.google.com/file/d/1LTAcmdfOgLzUx0qqqTlTP7vC9LxH_6sq/preview&quot; frameborder=&quot;0&quot; allowfullscreen loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;&lt;div class=&quot;mg-item mg-video&quot;&gt;&lt;iframe src=&quot;https://drive.google.com/file/d/1zeVHl-NyF3mNzPgZSNMOMcBDVPr-XXaf/preview&quot; frameborder=&quot;0&quot; allowfullscreen loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;&lt;div class=&quot;mg-item mg-video&quot;&gt;&lt;iframe src=&quot;https://drive.google.com/file/d/1NEPwR8R3vu2zjmFsO5NjfqxROs8J1Uq3/preview&quot; frameborder=&quot;0&quot; allowfullscreen loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;&lt;div class=&quot;mg-item mg-video&quot;&gt;&lt;iframe src=&quot;https://drive.google.com/file/d/13edc6RMbe48fMy14Anhig_M5I29Po0o0/preview&quot; frameborder=&quot;0&quot; allowfullscreen loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;&lt;div class=&quot;mg-item mg-img&quot;&gt;&lt;img src=&quot;https://drive.google.com/uc?export=view&amp;id=10BH3mEJkYLti67R8iSW2Xquxic0BVSUx&quot; loading=&quot;lazy&quot; onerror=&quot;this.parentElement.style.display=&#x27;none&#x27;&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;modal-section&quot;&gt;&lt;div class=&quot;modal-section-head&quot;&gt;Challenge&lt;/div&gt;&lt;div class=&quot;modal-text&quot;&gt;Launched in 2022 with limited impact, L&#x27;Oréal Paris Glycolic Bright Serum needed a full relaunch in 2024 with a reformulated product featuring Melasyl - an exclusive active ingredient in reducing dark spots. The challenge is how to &lt;strong&gt;convince consumers that this was not just an upgrade, but a science-backed transformation&lt;/strong&gt; worthy of trust and trial.&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;modal-divider&quot;&gt;&lt;/div&gt;&lt;div class=&quot;modal-section&quot;&gt;&lt;div class=&quot;modal-section-head&quot;&gt;Solution&lt;/div&gt;&lt;div class=&quot;modal-text&quot;&gt;&lt;strong&gt;Strategy:&lt;/strong&gt; Balance scientific credibility with youthful entertainment - &lt;strong&gt;positioning Glycolic Bright as the dermatologically authoritative yet Gen Z-relevant brightening solution.&lt;/strong&gt;&lt;br&gt;&lt;br&gt;&lt;strong&gt;Creative:&lt;/strong&gt; Localized the global concept &lt;strong&gt;&quot;Easy Hacking Tips with Melasyl&quot;&lt;/strong&gt; into &lt;strong&gt;&quot;Siêu hoạt chất Melasyl - Hack thâm siêu dễ.&quot;&lt;/strong&gt; Activated across a multi-format, multi-touchpoint approach: hero iTVC, social-first edutainment series featuring top KOLs from &quot;Anh Trai Say Hi,&quot; an immersive launch event, and a Mega Livestream Marathon on TikTok Shop.&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;modal-divider&quot;&gt;&lt;/div&gt;&lt;div class=&quot;modal-role&quot;&gt;Led integrated strategy and social planning development.&lt;/div&gt;" onclick="openModal(this)">
+      <div class="case-thumb">
+        <img src="https://drive.google.com/uc?export=view&id=1Vq-Wigp6-ryAwwQc3d_wOCFzt0M9xzTr" loading="lazy" alt="L'Oréal Paris Vietnam" onerror="this.parentElement.style.background='#e9f5ea'">
+        <div class="case-thumb-overlay"><span>Read more</span></div>
+      </div>
+      <div class="case-body">
+        <div class="case-cat">Beauty &amp; Personal Care</div>
+        <div class="case-client">L'Oréal Paris Vietnam</div>
+        <div class="case-title">IMC SOCIAL-LED STRATEGY FOR GLYCOLIC BRIGHT SERUM LAUNCHING 2024</div>
+        <div class="case-challenge-preview">The challenge is how to convince consumers that this was not just an upgrade, but a science-backed transformation worthy of trust and trial.</div>
+        <div class="case-footer">
+          <span class="case-year">2024</span>
+          <span class="case-read-more">Read more →</span>
+        </div>
+      </div>
+    </div>
+    <div class="case-card visible" data-cat="Beauty & Personal Care" data-modal="&lt;div class=&quot;modal-cat&quot;&gt;Beauty &amp;amp; Personal Care&lt;/div&gt;&lt;div class=&quot;modal-client&quot;&gt;L&#x27;Oréal Paris Vietnam&lt;/div&gt;&lt;div class=&quot;modal-title&quot;&gt;IMC SOCIAL-LED STRATEGY FOR FESTIVE SEASON 2024 - 2025&lt;/div&gt;&lt;div class=&quot;modal-gallery&quot;&gt;&lt;div class=&quot;mg-item mg-img&quot;&gt;&lt;img src=&quot;https://drive.google.com/uc?export=view&amp;id=1uI-67UINs2aDAegjUwNEAcdr7QkjYOOo&quot; loading=&quot;lazy&quot; onerror=&quot;this.parentElement.style.display=&#x27;none&#x27;&quot;&gt;&lt;/div&gt;&lt;div class=&quot;mg-item mg-img&quot;&gt;&lt;img src=&quot;https://drive.google.com/uc?export=view&amp;id=1kieK3tu9Xklo5S6Ud5F13NAZFsRWST4d&quot; loading=&quot;lazy&quot; onerror=&quot;this.parentElement.style.display=&#x27;none&#x27;&quot;&gt;&lt;/div&gt;&lt;div class=&quot;mg-item mg-video&quot;&gt;&lt;iframe src=&quot;https://drive.google.com/file/d/176iMn3uEXTBcZgT_LuznzO3xc6OLbFdw/preview&quot; frameborder=&quot;0&quot; allowfullscreen loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;&lt;div class=&quot;mg-item mg-video&quot;&gt;&lt;iframe src=&quot;https://drive.google.com/file/d/1hJOGpXem5RBqeBILkfpT26ti0MlE3gJ-/preview&quot; frameborder=&quot;0&quot; allowfullscreen loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;&lt;div class=&quot;mg-item mg-video&quot;&gt;&lt;iframe src=&quot;https://drive.google.com/file/d/1eWKmVTMKMY8Ef1cASd91tudeGhkPJbLI/preview&quot; frameborder=&quot;0&quot; allowfullscreen loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;modal-section&quot;&gt;&lt;div class=&quot;modal-section-head&quot;&gt;Challenge&lt;/div&gt;&lt;div class=&quot;modal-text&quot;&gt;Following a successful debut of Maison L&#x27;Oréal in Vietnam in 2023, Season Two needed to go further - &lt;strong&gt;strengthening brand relevance and deepening emotional connection&lt;/strong&gt; with consumers during the festive season, while driving gifting consideration through science-backed limited edition beauty sets.&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;modal-divider&quot;&gt;&lt;/div&gt;&lt;div class=&quot;modal-section&quot;&gt;&lt;div class=&quot;modal-section-head&quot;&gt;Solution&lt;/div&gt;&lt;div class=&quot;modal-text&quot;&gt;&lt;strong&gt;Strategy:&lt;/strong&gt; Reinforce L&#x27;Oréal Paris&#x27;s positioning as the Grand House of Science - &lt;strong&gt;turning the festive season into a celebration of beauty backed by science&lt;/strong&gt;, not just emotion.&lt;br&gt;&lt;br&gt;&lt;strong&gt;Creative:&lt;/strong&gt; &lt;strong&gt;&quot;Không phải phép màu - Đẹp từ khoa học.&quot;&lt;/strong&gt; Maison L&#x27;Oréal lights up the holiday season with science-based &amp;amp; fandom-mixed festive gift sets, brought to life through 10 social-first vertical assets spanning thematic festive visuals and product-focused science storytelling - curated for both self-care and gifting.&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;modal-divider&quot;&gt;&lt;/div&gt;&lt;div class=&quot;modal-role&quot;&gt;Led integrated strategy and social planning development.&lt;/div&gt;" onclick="openModal(this)">
+      <div class="case-thumb">
+        <img src="https://drive.google.com/uc?export=view&id=1uI-67UINs2aDAegjUwNEAcdr7QkjYOOo" loading="lazy" alt="L'Oréal Paris Vietnam" onerror="this.parentElement.style.background='#e9f5ea'">
+        <div class="case-thumb-overlay"><span>Read more</span></div>
+      </div>
+      <div class="case-body">
+        <div class="case-cat">Beauty &amp; Personal Care</div>
+        <div class="case-client">L'Oréal Paris Vietnam</div>
+        <div class="case-title">IMC SOCIAL-LED STRATEGY FOR FESTIVE SEASON 2024 - 2025</div>
+        <div class="case-challenge-preview">Season Two needed to go further - strengthening brand relevance and deepening emotional connection with consumers during the festive season.</div>
+        <div class="case-footer">
+          <span class="case-year">2024–2025</span>
+          <span class="case-read-more">Read more →</span>
+        </div>
+      </div>
+    </div>
+    <div class="case-card visible" data-cat="B2B & Industrial" data-modal="&lt;div class=&quot;modal-cat&quot;&gt;B2B &amp;amp; Industrial&lt;/div&gt;&lt;div class=&quot;modal-client&quot;&gt;Panasonic Vietnam&lt;/div&gt;&lt;div class=&quot;modal-title&quot;&gt;SOCIAL BRAND-OWNED COMMUNITY STRATEGY 2024&lt;/div&gt;&lt;div class=&quot;modal-gallery&quot;&gt;&lt;div class=&quot;mg-item mg-img&quot;&gt;&lt;img src=&quot;https://drive.google.com/uc?export=view&amp;id=1FlZwDDRkjESKUKkDJtdUc3Watds0mcsp&quot; loading=&quot;lazy&quot; onerror=&quot;this.parentElement.style.display=&#x27;none&#x27;&quot;&gt;&lt;/div&gt;&lt;div class=&quot;mg-item mg-img&quot;&gt;&lt;img src=&quot;https://drive.google.com/uc?export=view&amp;id=1KYxgQQr-FSAzUXU1y3zQlcHmgqzC932K&quot; loading=&quot;lazy&quot; onerror=&quot;this.parentElement.style.display=&#x27;none&#x27;&quot;&gt;&lt;/div&gt;&lt;div class=&quot;mg-item mg-img&quot;&gt;&lt;img src=&quot;https://drive.google.com/uc?export=view&amp;id=1tkHmeOuAT1oMrh9iH6hG3ssPlnNDpGd3&quot; loading=&quot;lazy&quot; onerror=&quot;this.parentElement.style.display=&#x27;none&#x27;&quot;&gt;&lt;/div&gt;&lt;div class=&quot;mg-item mg-img&quot;&gt;&lt;img src=&quot;https://drive.google.com/uc?export=view&amp;id=1dNPQcGz4tMwVSKlhb7o528RSfqBMcULn&quot; loading=&quot;lazy&quot; onerror=&quot;this.parentElement.style.display=&#x27;none&#x27;&quot;&gt;&lt;/div&gt;&lt;div class=&quot;mg-item mg-img&quot;&gt;&lt;img src=&quot;https://drive.google.com/uc?export=view&amp;id=1vn4TSc-whDvtirTNtDoevBiOfuVQ93Jm&quot; loading=&quot;lazy&quot; onerror=&quot;this.parentElement.style.display=&#x27;none&#x27;&quot;&gt;&lt;/div&gt;&lt;div class=&quot;mg-item mg-img&quot;&gt;&lt;img src=&quot;https://drive.google.com/uc?export=view&amp;id=1b4qCcFq-Q7zWghzPG9rqb4eBUCaQpJaa&quot; loading=&quot;lazy&quot; onerror=&quot;this.parentElement.style.display=&#x27;none&#x27;&quot;&gt;&lt;/div&gt;&lt;div class=&quot;mg-item mg-img&quot;&gt;&lt;img src=&quot;https://drive.google.com/uc?export=view&amp;id=1J1ZF8KY9xH6eHRvV6CvCn1MwyDAVzbN1&quot; loading=&quot;lazy&quot; onerror=&quot;this.parentElement.style.display=&#x27;none&#x27;&quot;&gt;&lt;/div&gt;&lt;div class=&quot;mg-item mg-img&quot;&gt;&lt;img src=&quot;https://drive.google.com/uc?export=view&amp;id=1laQygUuZm6MxAU6zntqrMRSybcTAApHl&quot; loading=&quot;lazy&quot; onerror=&quot;this.parentElement.style.display=&#x27;none&#x27;&quot;&gt;&lt;/div&gt;&lt;div class=&quot;mg-item mg-img&quot;&gt;&lt;img src=&quot;https://drive.google.com/uc?export=view&amp;id=1s1YX35n6NDrhbPwhY--1KUeeWu0eB1dz&quot; loading=&quot;lazy&quot; onerror=&quot;this.parentElement.style.display=&#x27;none&#x27;&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;modal-section&quot;&gt;&lt;div class=&quot;modal-section-head&quot;&gt;Challenge&lt;/div&gt;&lt;div class=&quot;modal-text&quot;&gt;&quot;Thợ điện thời hiện đại&quot; - Panasonic&#x27;s Facebook community for electricians and SME sellers, two key B2B stakeholder groups - had grown for four years but struggled to &lt;strong&gt;sustain quality engagement and bridge the distinct needs&lt;/strong&gt; of both audiences within one unified ecosystem.&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;modal-divider&quot;&gt;&lt;/div&gt;&lt;div class=&quot;modal-section&quot;&gt;&lt;div class=&quot;modal-section-head&quot;&gt;Solution&lt;/div&gt;&lt;div class=&quot;modal-text&quot;&gt;&lt;strong&gt;Strategy:&lt;/strong&gt; Rather than brand-led empowerment, &lt;strong&gt;cast community members themselves as the stars&lt;/strong&gt; - identifying and elevating human aspirations within the group to organically inspire others and drive authentic engagement from within.&lt;br&gt;&lt;br&gt;&lt;strong&gt;Creative:&lt;/strong&gt; &lt;strong&gt;&quot;Nâng Trình Siêu Thợ&quot;&lt;/strong&gt; - built on three uplift pillars: Knowledge &amp;amp; Skill (peer sharing, product quizzes, expert insights), Industrial Relations (bridging electricians and dealers to exchange knowledge and business opportunities), and Personal Achievements (recognizing contributors as role models for the next generation).&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;modal-divider&quot;&gt;&lt;/div&gt;&lt;div class=&quot;modal-section&quot;&gt;&lt;div class=&quot;modal-section-head&quot;&gt;Results&lt;/div&gt;&lt;div class=&quot;modal-results&quot;&gt;&lt;div&gt;&lt;div class=&quot;modal-stat-num&quot;&gt;5,000+&lt;/div&gt;&lt;div class=&quot;modal-stat-label&quot;&gt;Membership requests&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div class=&quot;modal-stat-num&quot;&gt;3,000+&lt;/div&gt;&lt;div class=&quot;modal-stat-label&quot;&gt;Verified new members&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div class=&quot;modal-stat-num&quot;&gt;25,000&lt;/div&gt;&lt;div class=&quot;modal-stat-label&quot;&gt;Interactions&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div class=&quot;modal-stat-num&quot;&gt;10,000&lt;/div&gt;&lt;div class=&quot;modal-stat-label&quot;&gt;Comments&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div class=&quot;modal-stat-num&quot;&gt;935&lt;/div&gt;&lt;div class=&quot;modal-stat-label&quot;&gt;Pieces of content generated&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div class=&quot;modal-stat-num&quot;&gt;12&lt;/div&gt;&lt;div class=&quot;modal-stat-label&quot;&gt;ECM products featured&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;modal-divider&quot;&gt;&lt;/div&gt;&lt;div class=&quot;modal-role&quot;&gt;Led social strategy and community planning development.&lt;/div&gt;" onclick="openModal(this)">
+      <div class="case-thumb">
+        <img src="https://drive.google.com/uc?export=view&id=1FlZwDDRkjESKUKkDJtdUc3Watds0mcsp" loading="lazy" alt="Panasonic Vietnam" onerror="this.parentElement.style.background='#e9f5ea'">
+        <div class="case-thumb-overlay"><span>Read more</span></div>
+      </div>
+      <div class="case-body">
+        <div class="case-cat">B2B &amp; Industrial</div>
+        <div class="case-client">Panasonic Vietnam</div>
+        <div class="case-title">SOCIAL BRAND-OWNED COMMUNITY STRATEGY 2024</div>
+        <div class="case-challenge-preview">"Thợ điện thời hiện đại" had grown for four years but struggled to sustain quality engagement and bridge the distinct needs of both audiences within one unified ecosystem.</div>
+        <div class="case-footer">
+          <span class="case-year">2024</span>
+          <span class="case-read-more">Read more →</span>
+        </div>
+      </div>
+    </div>
+    <div class="case-card visible" data-cat="B2B & Industrial" data-modal="&lt;div class=&quot;modal-cat&quot;&gt;B2B &amp;amp; Industrial&lt;/div&gt;&lt;div class=&quot;modal-client&quot;&gt;Panasonic Vietnam&lt;/div&gt;&lt;div class=&quot;modal-title&quot;&gt;SOCIAL STRATEGY FOR P-CHECK &amp;amp; RCBO PRODUCT 2025–2026&lt;/div&gt;&lt;div class=&quot;modal-gallery&quot;&gt;&lt;div class=&quot;mg-item mg-img&quot;&gt;&lt;img src=&quot;https://drive.google.com/uc?export=view&amp;id=11b9wc1npZUJHKkXGgfJdgtPubhm9sUPO&quot; loading=&quot;lazy&quot; onerror=&quot;this.parentElement.style.display=&#x27;none&#x27;&quot;&gt;&lt;/div&gt;&lt;div class=&quot;mg-item mg-img&quot;&gt;&lt;img src=&quot;https://drive.google.com/uc?export=view&amp;id=15LJqBSzXsB1zuU-fU-9iu1kFD-sHoKyn&quot; loading=&quot;lazy&quot; onerror=&quot;this.parentElement.style.display=&#x27;none&#x27;&quot;&gt;&lt;/div&gt;&lt;div class=&quot;mg-item mg-img&quot;&gt;&lt;img src=&quot;https://drive.google.com/uc?export=view&amp;id=1BuoOCWJjIAF3M4YorZc7EbyjinIjUKVB&quot; loading=&quot;lazy&quot; onerror=&quot;this.parentElement.style.display=&#x27;none&#x27;&quot;&gt;&lt;/div&gt;&lt;div class=&quot;mg-item mg-img&quot;&gt;&lt;img src=&quot;https://drive.google.com/uc?export=view&amp;id=1oyzo8R3ZscHHd_NAtv1R1doTPQ_ATOuI&quot; loading=&quot;lazy&quot; onerror=&quot;this.parentElement.style.display=&#x27;none&#x27;&quot;&gt;&lt;/div&gt;&lt;div class=&quot;mg-item mg-img&quot;&gt;&lt;img src=&quot;https://drive.google.com/uc?export=view&amp;id=1nZn7rT0z19zsO7fpU2dYN0A5bPXui6S1&quot; loading=&quot;lazy&quot; onerror=&quot;this.parentElement.style.display=&#x27;none&#x27;&quot;&gt;&lt;/div&gt;&lt;div class=&quot;mg-item mg-img&quot;&gt;&lt;img src=&quot;https://drive.google.com/uc?export=view&amp;id=1fEjcvhy2myzNGgqbJHDihiauztuwj70I&quot; loading=&quot;lazy&quot; onerror=&quot;this.parentElement.style.display=&#x27;none&#x27;&quot;&gt;&lt;/div&gt;&lt;div class=&quot;mg-item mg-img&quot;&gt;&lt;img src=&quot;https://drive.google.com/uc?export=view&amp;id=1C0UepzRTmlecxuZUyJwuq3Dq4MTre_2V&quot; loading=&quot;lazy&quot; onerror=&quot;this.parentElement.style.display=&#x27;none&#x27;&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;modal-section&quot;&gt;&lt;div class=&quot;modal-section-head&quot;&gt;Challenge&lt;/div&gt;&lt;div class=&quot;modal-text&quot;&gt;In a market affected by counterfeit electrical products, Panasonic launched P-check QR Code and pushed RCBO (thiết bị chống rò điện) as a growth priority - needing to &lt;strong&gt;turn awareness into real action&lt;/strong&gt; and build loyalty momentum ahead of peak season.&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;modal-divider&quot;&gt;&lt;/div&gt;&lt;div class=&quot;modal-section&quot;&gt;&lt;div class=&quot;modal-section-head&quot;&gt;Solution&lt;/div&gt;&lt;div class=&quot;modal-text&quot;&gt;&lt;strong&gt;Strategy:&lt;/strong&gt; Draw electricians and end-users into &lt;strong&gt;a gamified journey - nurturing behavior change through ongoing interaction and reward participation&lt;/strong&gt;, rather than one-time awareness exposure.&lt;br&gt;&lt;br&gt;&lt;strong&gt;Creative:&lt;/strong&gt; &lt;strong&gt;&quot;Thợ Điện Thực Chiến&quot;&lt;/strong&gt; - activated through three pillars: a Zalo Mini App enabling seamless QR scanning and loyalty participation in one flow; industry influencers amplifying P-check and RCBO credibility; and always-on support through AWO content, PR, media buying, and an RCBO education handbook for product knowledge building.&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;modal-divider&quot;&gt;&lt;/div&gt;&lt;div class=&quot;modal-role&quot;&gt;Led integrated strategy and social planning development.&lt;/div&gt;" onclick="openModal(this)">
+      <div class="case-thumb">
+        <img src="https://drive.google.com/uc?export=view&id=11b9wc1npZUJHKkXGgfJdgtPubhm9sUPO" loading="lazy" alt="Panasonic Vietnam" onerror="this.parentElement.style.background='#e9f5ea'">
+        <div class="case-thumb-overlay"><span>Read more</span></div>
+      </div>
+      <div class="case-body">
+        <div class="case-cat">B2B &amp; Industrial</div>
+        <div class="case-client">Panasonic Vietnam</div>
+        <div class="case-title">SOCIAL STRATEGY FOR P-CHECK &amp; RCBO PRODUCT 2025–2026</div>
+        <div class="case-challenge-preview">Panasonic launched P-check QR Code and pushed RCBO as a growth priority - needing to turn awareness into real action and build loyalty momentum ahead of peak season.</div>
+        <div class="case-footer">
+          <span class="case-year">2025–2026</span>
+          <span class="case-read-more">Read more →</span>
+        </div>
+      </div>
+    </div>
+    <div class="case-card visible" data-cat="B2B Logistics" data-modal="&lt;div class=&quot;modal-cat&quot;&gt;B2B Logistics&lt;/div&gt;&lt;div class=&quot;modal-client&quot;&gt;247Express&lt;/div&gt;&lt;div class=&quot;modal-title&quot;&gt;IMC STRATEGY FOR 20TH ANNIVERSARY 2025&lt;/div&gt;&lt;div class=&quot;modal-gallery&quot;&gt;&lt;div class=&quot;mg-item mg-img&quot;&gt;&lt;img src=&quot;https://drive.google.com/uc?export=view&amp;id=1TRNLz_zZl8OMNVFI_Dx2Y45gAwtPFcP-&quot; loading=&quot;lazy&quot; onerror=&quot;this.parentElement.style.display=&#x27;none&#x27;&quot;&gt;&lt;/div&gt;&lt;div class=&quot;mg-item mg-img&quot;&gt;&lt;img src=&quot;https://drive.google.com/uc?export=view&amp;id=1F12edDpsilyRBdefUFQmbdOtG2d1hafJ&quot; loading=&quot;lazy&quot; onerror=&quot;this.parentElement.style.display=&#x27;none&#x27;&quot;&gt;&lt;/div&gt;&lt;div class=&quot;mg-item mg-img&quot;&gt;&lt;img src=&quot;https://drive.google.com/uc?export=view&amp;id=17DCgJC98PWU2NSERC1T_NCkYHEz9wAJN&quot; loading=&quot;lazy&quot; onerror=&quot;this.parentElement.style.display=&#x27;none&#x27;&quot;&gt;&lt;/div&gt;&lt;div class=&quot;mg-item mg-img&quot;&gt;&lt;img src=&quot;https://drive.google.com/uc?export=view&amp;id=1pmfg2R0xSfRPkphQhEXncVjFV9FToFbz&quot; loading=&quot;lazy&quot; onerror=&quot;this.parentElement.style.display=&#x27;none&#x27;&quot;&gt;&lt;/div&gt;&lt;div class=&quot;mg-item mg-img&quot;&gt;&lt;img src=&quot;https://drive.google.com/uc?export=view&amp;id=1FGssku5O8AIxY7wSS8CEG7-B_bLMnyYw&quot; loading=&quot;lazy&quot; onerror=&quot;this.parentElement.style.display=&#x27;none&#x27;&quot;&gt;&lt;/div&gt;&lt;div class=&quot;mg-item mg-img&quot;&gt;&lt;img src=&quot;https://drive.google.com/uc?export=view&amp;id=18cdn1I-pOGwDZNWEWl_lmnr5u9ixVNbu&quot; loading=&quot;lazy&quot; onerror=&quot;this.parentElement.style.display=&#x27;none&#x27;&quot;&gt;&lt;/div&gt;&lt;div class=&quot;mg-item mg-img&quot;&gt;&lt;img src=&quot;https://drive.google.com/uc?export=view&amp;id=1-qT4eRuS2Oio5KKdJ7qikwHCtowenoro&quot; loading=&quot;lazy&quot; onerror=&quot;this.parentElement.style.display=&#x27;none&#x27;&quot;&gt;&lt;/div&gt;&lt;div class=&quot;mg-item mg-img&quot;&gt;&lt;img src=&quot;https://drive.google.com/uc?export=view&amp;id=1kqPbvyOSEAuwxUn0gGlPcPZoh3ISp5ll&quot; loading=&quot;lazy&quot; onerror=&quot;this.parentElement.style.display=&#x27;none&#x27;&quot;&gt;&lt;/div&gt;&lt;div class=&quot;mg-item mg-img&quot;&gt;&lt;img src=&quot;https://drive.google.com/uc?export=view&amp;id=1SjR4ovMIjOcud4lvELjlzzan4NDCu137&quot; loading=&quot;lazy&quot; onerror=&quot;this.parentElement.style.display=&#x27;none&#x27;&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;modal-section&quot;&gt;&lt;div class=&quot;modal-section-head&quot;&gt;Challenge&lt;/div&gt;&lt;div class=&quot;modal-text&quot;&gt;In the B2B logistics space, brands are often perceived as interchangeable - defined purely by price and speed. As Vietnam&#x27;s economy accelerates into a digital, globalized era, 247Express reached its 20-year milestone needing to do more than celebrate - it needed to &lt;strong&gt;redefine its role from a delivery service to a strategic growth partner for Vietnamese businesses.&lt;/strong&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;modal-divider&quot;&gt;&lt;/div&gt;&lt;div class=&quot;modal-section&quot;&gt;&lt;div class=&quot;modal-section-head&quot;&gt;Solution&lt;/div&gt;&lt;div class=&quot;modal-text&quot;&gt;&lt;strong&gt;Strategy:&lt;/strong&gt; Rather than leading with speed or scale, reframe the milestone as a declaration of purpose - &lt;strong&gt;positioning 247Express as the commercial lifeblood that has sustained Vietnam&#x27;s business pulse for 20 years&lt;/strong&gt;, and will power its next era of transformation.&lt;br&gt;&lt;br&gt;&lt;strong&gt;Creative:&lt;/strong&gt; &lt;strong&gt;&quot;Mở Mạch Chuyển Mình&quot;&lt;/strong&gt; - a metaphor that transforms logistics into a living circuit of growth. Activated through an inner-out approach: starting with employee pride and spreading outward through TVC, social content, and PR - turning every delivery into a symbol of connection between values, people, and the future.&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;modal-divider&quot;&gt;&lt;/div&gt;&lt;div class=&quot;modal-section&quot;&gt;&lt;div class=&quot;modal-section-head&quot;&gt;Results&lt;/div&gt;&lt;div class=&quot;modal-results&quot;&gt;&lt;div&gt;&lt;div class=&quot;modal-stat-num&quot;&gt;50M+&lt;/div&gt;&lt;div class=&quot;modal-stat-label&quot;&gt;Total impressions&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div class=&quot;modal-stat-num&quot;&gt;10M+&lt;/div&gt;&lt;div class=&quot;modal-stat-label&quot;&gt;TVC views · 9.8M reach&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div class=&quot;modal-stat-num&quot;&gt;+40%&lt;/div&gt;&lt;div class=&quot;modal-stat-label&quot;&gt;Engagement rate vs. 2024&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div class=&quot;modal-stat-num&quot;&gt;122%&lt;/div&gt;&lt;div class=&quot;modal-stat-label&quot;&gt;Cumulative revenue Jan–Aug 2025 reached 122% of 2024 annual average&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;modal-divider&quot;&gt;&lt;/div&gt;&lt;div class=&quot;modal-role&quot;&gt;Led integrated strategy&lt;/div&gt;" onclick="openModal(this)">
+      <div class="case-thumb">
+        <img src="https://drive.google.com/uc?export=view&id=1TRNLz_zZl8OMNVFI_Dx2Y45gAwtPFcP-" loading="lazy" alt="247Express" onerror="this.parentElement.style.background='#e9f5ea'">
+        <div class="case-thumb-overlay"><span>Read more</span></div>
+      </div>
+      <div class="case-body">
+        <div class="case-cat">B2B Logistics</div>
+        <div class="case-client">247Express</div>
+        <div class="case-title">IMC STRATEGY FOR 20TH ANNIVERSARY 2025</div>
+        <div class="case-challenge-preview">247Express reached its 20-year milestone needing to redefine its role from a delivery service to a strategic growth partner for Vietnamese businesses.</div>
+        <div class="case-footer">
+          <span class="case-year">2025</span>
+          <span class="case-read-more">Read more →</span>
+        </div>
+      </div>
+    </div>
+    <div class="case-card visible" data-cat="Building & Construction" data-modal="&lt;div class=&quot;modal-cat&quot;&gt;Building &amp;amp; Construction&lt;/div&gt;&lt;div class=&quot;modal-client&quot;&gt;VietDuc Steel Group&lt;/div&gt;&lt;div class=&quot;modal-title&quot;&gt;BRAND POSITIONING STRATEGY 2024&lt;/div&gt;&lt;div class=&quot;modal-gallery&quot;&gt;&lt;div class=&quot;mg-item mg-img&quot;&gt;&lt;img src=&quot;https://drive.google.com/uc?export=view&amp;id=1UByeTniYveuieruADDtZF9wm7CAZvS3X&quot; loading=&quot;lazy&quot; onerror=&quot;this.parentElement.style.display=&#x27;none&#x27;&quot;&gt;&lt;/div&gt;&lt;div class=&quot;mg-item mg-img&quot;&gt;&lt;img src=&quot;https://drive.google.com/uc?export=view&amp;id=1bKj0SJaZ_HG0p05hq3RbFZuIgAsuVJu5&quot; loading=&quot;lazy&quot; onerror=&quot;this.parentElement.style.display=&#x27;none&#x27;&quot;&gt;&lt;/div&gt;&lt;div class=&quot;mg-item mg-img&quot;&gt;&lt;img src=&quot;https://drive.google.com/uc?export=view&amp;id=18h_NJwX63pHA9TlX8UCdPT9WeX-bXwNA&quot; loading=&quot;lazy&quot; onerror=&quot;this.parentElement.style.display=&#x27;none&#x27;&quot;&gt;&lt;/div&gt;&lt;div class=&quot;mg-item mg-img&quot;&gt;&lt;img src=&quot;https://drive.google.com/uc?export=view&amp;id=1gNC49j8XYzLDkh_d-lBQ4O2vDVQwkWQH&quot; loading=&quot;lazy&quot; onerror=&quot;this.parentElement.style.display=&#x27;none&#x27;&quot;&gt;&lt;/div&gt;&lt;div class=&quot;mg-item mg-img&quot;&gt;&lt;img src=&quot;https://drive.google.com/uc?export=view&amp;id=1q-rwmj9uojIjSZSkNSgtnvy7iemIV2Vy&quot; loading=&quot;lazy&quot; onerror=&quot;this.parentElement.style.display=&#x27;none&#x27;&quot;&gt;&lt;/div&gt;&lt;div class=&quot;mg-item mg-img&quot;&gt;&lt;img src=&quot;https://drive.google.com/uc?export=view&amp;id=1z1gd71HxMemyP0EeMKqAeagkhSR4JwrL&quot; loading=&quot;lazy&quot; onerror=&quot;this.parentElement.style.display=&#x27;none&#x27;&quot;&gt;&lt;/div&gt;&lt;div class=&quot;mg-item mg-img&quot;&gt;&lt;img src=&quot;https://drive.google.com/uc?export=view&amp;id=1ZzFp7ROJvNY3OiR7UbMVHLFF2hDL0Fip&quot; loading=&quot;lazy&quot; onerror=&quot;this.parentElement.style.display=&#x27;none&#x27;&quot;&gt;&lt;/div&gt;&lt;div class=&quot;mg-item mg-img&quot;&gt;&lt;img src=&quot;https://drive.google.com/uc?export=view&amp;id=1GkMHhCOH6d1e9cwxLnE83QUyjpm08COM&quot; loading=&quot;lazy&quot; onerror=&quot;this.parentElement.style.display=&#x27;none&#x27;&quot;&gt;&lt;/div&gt;&lt;div class=&quot;mg-item mg-img&quot;&gt;&lt;img src=&quot;https://drive.google.com/uc?export=view&amp;id=15JnyO_W-hUCQkunXapOJuyplDcq3jzeJ&quot; loading=&quot;lazy&quot; onerror=&quot;this.parentElement.style.display=&#x27;none&#x27;&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;modal-section&quot;&gt;&lt;div class=&quot;modal-section-head&quot;&gt;Challenge&lt;/div&gt;&lt;div class=&quot;modal-text&quot;&gt;Ranked among Vietnam&#x27;s top 5 steel companies, VietDuc Steel Group was expanding beyond manufacturing into real estate - requiring a new brand positioning for multi-industry ambition while preserving its core heritage in steel. In a competitive landscape where multi-sector rivals continuously refine their brand strategies, VietDuc needed to &lt;strong&gt;differentiate without losing the trust built over decades of manufacturing excellence.&lt;/strong&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;modal-divider&quot;&gt;&lt;/div&gt;&lt;div class=&quot;modal-section&quot;&gt;&lt;div class=&quot;modal-section-head&quot;&gt;Solution&lt;/div&gt;&lt;div class=&quot;modal-text&quot;&gt;&lt;strong&gt;Strategy:&lt;/strong&gt; Moved beyond product-led B2B messaging by recognizing that purchasing decisions are driven by both rational and emotional factors - &lt;strong&gt;repositioning VietDuc as a brand that values long-term growth and untapped potential&lt;/strong&gt;, building lasting partnerships for mutual success.&lt;br&gt;&lt;br&gt;&lt;strong&gt;Creative:&lt;/strong&gt; &lt;strong&gt;&quot;Định Vững Tương Lai / For a Steadfast Future&quot;&lt;/strong&gt; - a brand manifesto rooted in the steel heritage of VietDuc, where &quot;Định&quot; (steadfast conviction), &quot;Vững&quot; (enduring strength), and &quot;Tương Lai&quot; (future) together communicate a brand committed to shaping not just structures, but the foundations of a new era - for clients, partners, and communities.&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;modal-divider&quot;&gt;&lt;/div&gt;&lt;div class=&quot;modal-role&quot;&gt;Led brand strategy and full positioning development.&lt;/div&gt;" onclick="openModal(this)">
+      <div class="case-thumb">
+        <img src="https://drive.google.com/uc?export=view&id=1UByeTniYveuieruADDtZF9wm7CAZvS3X" loading="lazy" alt="VietDuc Steel Group" onerror="this.parentElement.style.background='#e9f5ea'">
+        <div class="case-thumb-overlay"><span>Read more</span></div>
+      </div>
+      <div class="case-body">
+        <div class="case-cat">Building &amp; Construction</div>
+        <div class="case-client">VietDuc Steel Group</div>
+        <div class="case-title">BRAND POSITIONING STRATEGY 2024</div>
+        <div class="case-challenge-preview">VietDuc Steel Group was expanding beyond manufacturing into real estate, requiring a new brand positioning while preserving its core heritage in steel.</div>
+        <div class="case-footer">
+          <span class="case-year">2024</span>
+          <span class="case-read-more">Read more →</span>
+        </div>
+      </div>
+    </div>
+    <div class="case-card visible" data-cat="Building & Construction" data-modal="&lt;div class=&quot;modal-cat&quot;&gt;Building &amp;amp; Construction&lt;/div&gt;&lt;div class=&quot;modal-client&quot;&gt;Jorakay Crocodile Vietnam&lt;/div&gt;&lt;div class=&quot;modal-title&quot;&gt;ACTIVATION-LED PR STRATEGY 2023&lt;/div&gt;&lt;div class=&quot;modal-gallery&quot;&gt;&lt;div class=&quot;mg-item mg-img&quot;&gt;&lt;img src=&quot;https://drive.google.com/uc?export=view&amp;id=1Cygu0zWHYhbRCEcWC_T6dYSP0wA1vRcm&quot; loading=&quot;lazy&quot; onerror=&quot;this.parentElement.style.display=&#x27;none&#x27;&quot;&gt;&lt;/div&gt;&lt;div class=&quot;mg-item mg-img&quot;&gt;&lt;img src=&quot;https://drive.google.com/uc?export=view&amp;id=16Mv2J_CyJh-nA8x9wDimlMFde11WKcQL&quot; loading=&quot;lazy&quot; onerror=&quot;this.parentElement.style.display=&#x27;none&#x27;&quot;&gt;&lt;/div&gt;&lt;div class=&quot;mg-item mg-img&quot;&gt;&lt;img src=&quot;https://drive.google.com/uc?export=view&amp;id=1VK-7ZVS17t3DYxKLMcpgPo9X6LYPqONC&quot; loading=&quot;lazy&quot; onerror=&quot;this.parentElement.style.display=&#x27;none&#x27;&quot;&gt;&lt;/div&gt;&lt;div class=&quot;mg-item mg-img&quot;&gt;&lt;img src=&quot;https://drive.google.com/uc?export=view&amp;id=1WiSUYGx0sGW9OP87j_Q5Mv7me3OzsTQd&quot; loading=&quot;lazy&quot; onerror=&quot;this.parentElement.style.display=&#x27;none&#x27;&quot;&gt;&lt;/div&gt;&lt;div class=&quot;mg-item mg-img&quot;&gt;&lt;img src=&quot;https://drive.google.com/uc?export=view&amp;id=1d3OPWqt7hEl5r8M3m5Mt2HMA3SMZuMbE&quot; loading=&quot;lazy&quot; onerror=&quot;this.parentElement.style.display=&#x27;none&#x27;&quot;&gt;&lt;/div&gt;&lt;div class=&quot;mg-item mg-img&quot;&gt;&lt;img src=&quot;https://drive.google.com/uc?export=view&amp;id=15ATuZVkIe9vy_h7kDVDLddTXhstPIcix&quot; loading=&quot;lazy&quot; onerror=&quot;this.parentElement.style.display=&#x27;none&#x27;&quot;&gt;&lt;/div&gt;&lt;div class=&quot;mg-item mg-img&quot;&gt;&lt;img src=&quot;https://drive.google.com/uc?export=view&amp;id=1v8eSsIbkV5qsWdRjJWttA9ZRDGzjLg3B&quot; loading=&quot;lazy&quot; onerror=&quot;this.parentElement.style.display=&#x27;none&#x27;&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;modal-section&quot;&gt;&lt;div class=&quot;modal-section-head&quot;&gt;Challenge&lt;/div&gt;&lt;div class=&quot;modal-text&quot;&gt;Crocodile (Jorakay) - a pioneering Thai construction adhesive brand known in Vietnam as &quot;Keo Cá Sấu&quot; - faced two compounding challenges upon entering the market: widespread counterfeit products damaging both business partners&#x27; reputations and end-user outcomes, alongside &lt;strong&gt;low product category knowledge and brand recognition&lt;/strong&gt; among its primary target audience of homeowners.&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;modal-divider&quot;&gt;&lt;/div&gt;&lt;div class=&quot;modal-section&quot;&gt;&lt;div class=&quot;modal-section-head&quot;&gt;Solution&lt;/div&gt;&lt;div class=&quot;modal-text&quot;&gt;&lt;strong&gt;Strategy:&lt;/strong&gt; Positioned Crocodile&#x27;s global heritage and international quality standards as the clearest differentiator against counterfeits - establishing the brand as &lt;strong&gt;the &quot;True Choice for Your Purposes&quot;&lt;/strong&gt; for both B2B partners and homeowners seeking reliable construction solutions.&lt;br&gt;&lt;br&gt;&lt;strong&gt;Deliverables:&lt;/strong&gt; A dual-channel activation combining mass and specialized PR to build category credibility and brand awareness, anchored by a &lt;strong&gt;flagship presence at VietBuild Exhibition&lt;/strong&gt; - Vietnam&#x27;s premier construction industry event - to drive direct lead generation and authenticate the brand&#x27;s market entry.&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;modal-divider&quot;&gt;&lt;/div&gt;&lt;div class=&quot;modal-section&quot;&gt;&lt;div class=&quot;modal-section-head&quot;&gt;Results&lt;/div&gt;&lt;div class=&quot;modal-results&quot;&gt;&lt;div&gt;&lt;div class=&quot;modal-stat-num&quot;&gt;2,000+&lt;/div&gt;&lt;div class=&quot;modal-stat-label&quot;&gt;Lead data collected at Exhibition (120% of KPI)&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div class=&quot;modal-stat-num&quot;&gt;30&lt;/div&gt;&lt;div class=&quot;modal-stat-label&quot;&gt;PR outcomes&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div class=&quot;modal-stat-num&quot;&gt;01&lt;/div&gt;&lt;div class=&quot;modal-stat-label&quot;&gt;TV news feature on HTV9&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;modal-divider&quot;&gt;&lt;/div&gt;&lt;div class=&quot;modal-role&quot;&gt;Led all channel communication planning.&lt;/div&gt;" onclick="openModal(this)">
+      <div class="case-thumb">
+        <img src="https://drive.google.com/uc?export=view&id=1Cygu0zWHYhbRCEcWC_T6dYSP0wA1vRcm" loading="lazy" alt="Jorakay Crocodile Vietnam" onerror="this.parentElement.style.background='#e9f5ea'">
+        <div class="case-thumb-overlay"><span>Read more</span></div>
+      </div>
+      <div class="case-body">
+        <div class="case-cat">Building &amp; Construction</div>
+        <div class="case-client">Jorakay Crocodile Vietnam</div>
+        <div class="case-title">ACTIVATION-LED PR STRATEGY 2023</div>
+        <div class="case-challenge-preview">Widespread counterfeit products damaged both business partners' reputations and end-user outcomes, alongside low product category knowledge and brand recognition among homeowners.</div>
+        <div class="case-footer">
+          <span class="case-year">2023</span>
+          <span class="case-read-more">Read more →</span>
+        </div>
+      </div>
+    </div>
+    <div class="case-card visible" data-cat="Tourism" data-modal="&lt;div class=&quot;modal-cat&quot;&gt;Tourism&lt;/div&gt;&lt;div class=&quot;modal-client&quot;&gt;Singapore Tourism Board - SingaporeReimagine&lt;/div&gt;&lt;div class=&quot;modal-title&quot;&gt;FULL-YEAR PR &amp;amp; SOCIAL RETAINER 2021 – 2022&lt;/div&gt;&lt;div class=&quot;modal-gallery&quot;&gt;&lt;div class=&quot;mg-item mg-img&quot;&gt;&lt;img src=&quot;https://drive.google.com/uc?export=view&amp;id=11aVNXWvSN_sw7W9NXxwMpp6ZSuC_9KUv&quot; loading=&quot;lazy&quot; onerror=&quot;this.parentElement.style.display=&#x27;none&#x27;&quot;&gt;&lt;/div&gt;&lt;div class=&quot;mg-item mg-img&quot;&gt;&lt;img src=&quot;https://drive.google.com/uc?export=view&amp;id=1lbSWwRaEu5nkypDA45MIf0BwiZeV2tu0&quot; loading=&quot;lazy&quot; onerror=&quot;this.parentElement.style.display=&#x27;none&#x27;&quot;&gt;&lt;/div&gt;&lt;div class=&quot;mg-item mg-img&quot;&gt;&lt;img src=&quot;https://drive.google.com/uc?export=view&amp;id=1W4Bd8n9MqqaHfEOyqgnhN-PNPPcJIoUa&quot; loading=&quot;lazy&quot; onerror=&quot;this.parentElement.style.display=&#x27;none&#x27;&quot;&gt;&lt;/div&gt;&lt;div class=&quot;mg-item mg-img&quot;&gt;&lt;img src=&quot;https://drive.google.com/uc?export=view&amp;id=1NoiuQprDqGSo6k6uY__y435OJGRKWTNX&quot; loading=&quot;lazy&quot; onerror=&quot;this.parentElement.style.display=&#x27;none&#x27;&quot;&gt;&lt;/div&gt;&lt;div class=&quot;mg-item mg-img&quot;&gt;&lt;img src=&quot;https://drive.google.com/uc?export=view&amp;id=1VdqaxV9WwEl_P238F_RY8re4Z9JCroIf&quot; loading=&quot;lazy&quot; onerror=&quot;this.parentElement.style.display=&#x27;none&#x27;&quot;&gt;&lt;/div&gt;&lt;div class=&quot;mg-item mg-img&quot;&gt;&lt;img src=&quot;https://drive.google.com/uc?export=view&amp;id=1pFEt4YyT77bJbZ0R--K84eMbaaAibYK-&quot; loading=&quot;lazy&quot; onerror=&quot;this.parentElement.style.display=&#x27;none&#x27;&quot;&gt;&lt;/div&gt;&lt;div class=&quot;mg-item mg-img&quot;&gt;&lt;img src=&quot;https://drive.google.com/uc?export=view&amp;id=1q0ox4-Lrcd8nLDXRxQhnovVmPR0d7AoY&quot; loading=&quot;lazy&quot; onerror=&quot;this.parentElement.style.display=&#x27;none&#x27;&quot;&gt;&lt;/div&gt;&lt;div class=&quot;mg-item mg-img&quot;&gt;&lt;img src=&quot;https://drive.google.com/uc?export=view&amp;id=19SI8i7Wa8H48cHWZ4r9swzi5fiDJ9lOM&quot; loading=&quot;lazy&quot; onerror=&quot;this.parentElement.style.display=&#x27;none&#x27;&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;modal-section&quot;&gt;&lt;div class=&quot;modal-section-head&quot;&gt;Challenge&lt;/div&gt;&lt;div class=&quot;modal-text&quot;&gt;In the aftermath of COVID-19, Singapore Tourism Board needed to reignite Vietnam&#x27;s affinity for Singapore as a travel destination - navigating a highly uncertain travel climate, shifting consumer sentiment, and a fragile media landscape. The challenge is how to &lt;strong&gt;rebuild excitement and drive visitor intent&lt;/strong&gt; before borders fully reopened, under the &quot;Passion Made Possible&quot; brand platform.&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;modal-divider&quot;&gt;&lt;/div&gt;&lt;div class=&quot;modal-section&quot;&gt;&lt;div class=&quot;modal-section-head&quot;&gt;Solution&lt;/div&gt;&lt;div class=&quot;modal-text&quot;&gt;&lt;strong&gt;Strategy:&lt;/strong&gt; Position STB not as a tourism advertiser, but as &lt;strong&gt;a trusted voice in Vietnam&#x27;s travel recovery&lt;/strong&gt; - proactively steering the narrative through strategic media counsel, crisis management, and advocacy-driven storytelling - via 02 year communication planning into three traveling strategic tribe – Retail (Collectors), Neighborhood (Explorers), Dining (Foodies) and MICE (Progressors)&lt;br&gt;&lt;br&gt;&lt;strong&gt;Deliverables:&lt;/strong&gt; Translate &quot;SingaporeReimagine&quot; - An always-on communication program built into three pillars: strategic counsel and brand voice management across issues and crisis scenarios; active media engagement to secure positive Singapore coverage; and advocacy and consumer education efforts to build confidence and reignite travel desire ahead of border reopening.&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;modal-divider&quot;&gt;&lt;/div&gt;&lt;div class=&quot;modal-section&quot;&gt;&lt;div class=&quot;modal-section-head&quot;&gt;Results&lt;/div&gt;&lt;div class=&quot;modal-results&quot;&gt;&lt;div&gt;&lt;div class=&quot;modal-stat-num&quot;&gt;1,500&lt;/div&gt;&lt;div class=&quot;modal-stat-label&quot;&gt;Total outcomes (Jun 2021 – Jul 2022)&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div class=&quot;modal-stat-num&quot;&gt;1,192&lt;/div&gt;&lt;div class=&quot;modal-stat-label&quot;&gt;PR outcomes (TV news, news coverage, PR articles)&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div class=&quot;modal-stat-num&quot;&gt;308&lt;/div&gt;&lt;div class=&quot;modal-stat-label&quot;&gt;Social outcomes (influencer &amp;amp; owned channels)&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div class=&quot;modal-stat-num&quot;&gt;58.6M&lt;/div&gt;&lt;div class=&quot;modal-stat-label&quot;&gt;Reach on social · 962,572 engagements · 33% from earned effort&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;modal-divider&quot;&gt;&lt;/div&gt;&lt;div class=&quot;modal-role&quot;&gt;Contributing to 02-year planning &amp;amp; Led in tribe communication planning and content planing&lt;/div&gt;" onclick="openModal(this)">
+      <div class="case-thumb">
+        <img src="https://drive.google.com/uc?export=view&id=11aVNXWvSN_sw7W9NXxwMpp6ZSuC_9KUv" loading="lazy" alt="Singapore Tourism Board - SingaporeReimagine" onerror="this.parentElement.style.background='#e9f5ea'">
+        <div class="case-thumb-overlay"><span>Read more</span></div>
+      </div>
+      <div class="case-body">
+        <div class="case-cat">Tourism</div>
+        <div class="case-client">Singapore Tourism Board - SingaporeReimagine</div>
+        <div class="case-title">FULL-YEAR PR &amp; SOCIAL RETAINER 2021 – 2022</div>
+        <div class="case-challenge-preview">Singapore Tourism Board needed to reignite Vietnam's affinity for Singapore as a travel destination - rebuilding excitement and driving visitor intent before borders fully reopened.</div>
+        <div class="case-footer">
+          <span class="case-year">2021–2022</span>
+          <span class="case-read-more">Read more →</span>
+        </div>
+      </div>
+    </div>
+  </div><!-- /cases-grid --><!-- /cases-grid -->
+
+  <!-- IN-PROGRESS -->
+  <div class="ip-section">
+    <div class="ip-label">In-progress works</div>
+    <div class="ip-grid">
+      <div class="ip-card"><div class="ip-cat">Beauty &amp; Personal Care</div><div class="ip-title">Saforelle Full Year 2026 &amp; March Women Month 2026</div><div class="ip-desc">Shifted Saforelle's narrative from clinical gynecological care to an aspirational, social-first story for Vietnamese women — positioning product line as a lifestyle device enables "queen-of-herself" standard of living.</div><div class="ip-imgs-real"><div class="ow-media-item"><img src="https://drive.google.com/uc?export=view&id=1FqwnQ9xDhaafRdbyYMLOmPu_yaS9bICY" loading="lazy" onerror="this.parentElement.style.display='none'"></div><div class="ow-media-item"><img src="https://drive.google.com/uc?export=view&id=1f2lQi084_aZYB90ab6YKS0HNCmK4_ot7" loading="lazy" onerror="this.parentElement.style.display='none'"></div><div class="ow-media-item"><img src="https://drive.google.com/uc?export=view&id=12x7kmrEKFnmbjbnGzVaHPOmKHJSYKCa9" loading="lazy" onerror="this.parentElement.style.display='none'"></div><div class="ow-media-item"><img src="https://drive.google.com/uc?export=view&id=11hcAHQkMODL4Qn3VYCRj13HTgtkj2Cb4" loading="lazy" onerror="this.parentElement.style.display='none'"></div></div><div class="ph">img 2</div><div class="ph">img 3</div><div class="ph">img 4</div></div></div>
+      <div class="ip-card"><div class="ip-cat">Beauty &amp; Personal Care</div><div class="ip-title">L'Oréal Paris – Lumi Cream Launching 2026</div><div class="ip-desc">Anchored the product launch in celebrity fandom energy — leveraging a Rhyder partnership to engineer a social-first launch that moves from fandom core outward to mass female beauty users.</div><div class="ip-imgs-real"><div class="ow-media-item"><img src="https://drive.google.com/uc?export=view&id=1v9wjpiybh8-ePo5wV_VF8jvcxecM2oJE" loading="lazy" onerror="this.parentElement.style.display='none'"></div><div class="ow-media-item"><img src="https://drive.google.com/uc?export=view&id=1NM8zH_P6SeK5c3UVv63gNcNVDmVrsoNo" loading="lazy" onerror="this.parentElement.style.display='none'"></div><div class="ow-media-item"><img src="https://drive.google.com/uc?export=view&id=1USlHrFbvuzgehLMiyce53uWiQCMe06Z0" loading="lazy" onerror="this.parentElement.style.display='none'"></div></div><div class="ph">img 2</div><div class="ph">img 3</div><div class="ph">img 4</div></div></div>
+      <div class="ip-card"><div class="ip-cat">Building &amp; Construction</div><div class="ip-title">KOVA – CT04 Paint Launch 04/2026</div><div class="ip-desc">Positioned KOVA CT04 exterior paint as a regional specialty — each formulation matched to local weather, communicated through the lens of local food culture to resonate with painters, contractors, and dealers who buy on practical relevance.</div><div class="ip-imgs-real"><div class="ow-media-item"><img src="https://drive.google.com/uc?export=view&id=1vQ7xNX977eI5BZbHdIg7V_Ue14JMz86Y" loading="lazy" onerror="this.parentElement.style.display='none'"></div><div class="ow-media-item"><img src="https://drive.google.com/uc?export=view&id=1jAAaVJR9ERW6l0Wzj7B6E8dtKgTMbuya" loading="lazy" onerror="this.parentElement.style.display='none'"></div><div class="ow-media-item"><img src="https://drive.google.com/uc?export=view&id=1SV2BnsAm-t7jmPRdUfHrRp19OtQKPgeB" loading="lazy" onerror="this.parentElement.style.display='none'"></div><div class="ow-media-item"><iframe src="https://drive.google.com/file/d/13K2wZxSSBcxuP_rvqkcUoSVyNLeuJrUZ/preview" frameborder="0" allowfullscreen loading="lazy"></iframe></div></div><div class="ph">img 2</div><div class="ph">img 3</div><div class="ph">img 4</div></div></div>
+    </div>
+  </div>
+
+  <!-- OTHER WINS -->
+  <div class="ow-section">
+    <div class="ip-label">Other wins</div>
+    <div class="ow-grid">
+      <div class="ow-item"><div class="ow-cat">Beauty &amp; Personal Care</div><div class="ow-title">L'Oréal Paris – Chính Nữ 3.0 IMC Campaign</div><div class="ow-imgs-real"><div class="ow-media-item"><img src="https://drive.google.com/uc?export=view&id=1Nva6Yi95HMz73bU0F5SwEkXITum1Unx3" loading="lazy" onerror="this.parentElement.style.display='none'"></div><div class="ow-media-item"><img src="https://drive.google.com/uc?export=view&id=15O0AyW9bQw1F14PH4zKwMtI4Bssv3KKn" loading="lazy" onerror="this.parentElement.style.display='none'"></div><div class="ow-media-item"><img src="https://drive.google.com/uc?export=view&id=1proyBQEAWOwx6YSWcDJxf4ZhS8cj6tlz" loading="lazy" onerror="this.parentElement.style.display='none'"></div><div class="ow-media-item"><img src="https://drive.google.com/uc?export=view&id=14VvuYWbh-rYmSWJSwrtMFh6itZd572GM" loading="lazy" onerror="this.parentElement.style.display='none'"></div></div><div class="ph">img 2</div><div class="ph">img 3</div><div class="ph">img 4</div></div><div class="ow-desc">Developed the third installment of L'Oréal Paris' flagship "Chính Nữ" platform, challenging age-based social timelines through an integrated campaign spanning Social Stunt, TVC, and product film that reinforced the brand's empowerment positioning in Vietnam.</div></div>
+      <div class="ow-item"><div class="ow-cat">Healthcare</div><div class="ow-title">Philips Healthcare – Product Communication</div><div class="ow-imgs-real"><div class="ow-media-item"><img src="https://drive.google.com/uc?export=view&id=18vAD5yT4wgbVhWG3Hle9uvahcZuhBbz7" loading="lazy" onerror="this.parentElement.style.display='none'"></div><div class="ow-media-item"><img src="https://drive.google.com/uc?export=view&id=1cB3lEQzatrvaiIpw8Wih-HFyebo7IjkL" loading="lazy" onerror="this.parentElement.style.display='none'"></div><div class="ow-media-item"><img src="https://drive.google.com/uc?export=view&id=1g-LK0HRPdGJhm9rjAssgMAH94Tlk7by3" loading="lazy" onerror="this.parentElement.style.display='none'"></div><div class="ow-media-item"><img src="https://drive.google.com/uc?export=view&id=1gknf9H9oSfq_2AfdP7PY1TQSGhPmW5gk" loading="lazy" onerror="this.parentElement.style.display='none'"></div></div><div class="ow-media-item"><img src="https://drive.google.com/uc?export=view&id=1GkGGsjE5nLumkkBbSgNoAmPXOJDFXwFZ" loading="lazy" onerror="this.parentElement.style.display='none'"></div><div class="ow-media-item"><img src="https://drive.google.com/uc?export=view&id=1aRjjIBlvvfWzSQzHJzkwN7hJL3jLomkM" loading="lazy" onerror="this.parentElement.style.display='none'"></div><div class="ow-media-item"><img src="https://drive.google.com/uc?export=view&id=1r6LX2pvH69xoOH3P3P0qyE7n8Wi5ypcD" loading="lazy" onerror="this.parentElement.style.display='none'"></div></div><div class="ph">img 2</div><div class="ph">img 3</div><div class="ph">img 4</div></div><div class="ow-desc">Contributed to a 2-year PR communication plan covering brand, technology product, and CSR for Philips Healthcare — executed at national scale with deep engagement across hospital partners and medical organizations.</div></div>
+      <div class="ow-item"><div class="ow-cat">Automotive</div><div class="ow-title">Bridgestone (Tire) Corporation – Retainer &amp; Product Launch</div><div class="ow-imgs-real"><div class="ow-media-item"><img src="https://drive.google.com/uc?export=view&id=1C_ZHGhcm-iovVoGjfDFaWPJF6xcfJgQL" loading="lazy" onerror="this.parentElement.style.display='none'"></div><div class="ow-media-item"><img src="https://drive.google.com/uc?export=view&id=1Uj7RBNo_hrng8KZXHfWm5KFlDjut13yE" loading="lazy" onerror="this.parentElement.style.display='none'"></div><div class="ow-media-item"><img src="https://drive.google.com/uc?export=view&id=1_Utksl8kRcd6-uAEElvaBczljs45GtN1" loading="lazy" onerror="this.parentElement.style.display='none'"></div><div class="ow-media-item"><img src="https://drive.google.com/uc?export=view&id=1HqTHobhK8E8QO-riM_OavC29ty4HciOg" loading="lazy" onerror="this.parentElement.style.display='none'"></div></div><div class="ph">img 2</div><div class="ph">img 3</div><div class="ph">img 4</div></div><div class="ow-desc">Contributed to a 3-year communication plan spanning brand PR, product launches, and CSR while modernizing Bridgestone's PR-focused communication approach across multi-segment automotive communities in Vietnam.</div></div>
+      <div class="ow-item"><div class="ow-cat">B2B Industrial</div><div class="ow-title">Schneider Electric &amp; Schneider Electric IT – Retainer &amp; Product Communication</div><div class="ow-imgs"><div class="ph">img 1</div><div class="ph">img 2</div><div class="ph">img 3</div><div class="ph">img 4</div></div><div class="ow-desc">Evolved a long-standing B2B PR retainer into a multi-channel PR-Social approach for top share of voices competiting — making Schneider's' technological offerings more relatable to everyday life and significantly more visible across mainstream consumer media.</div></div>
+    </div>
+
+    <!-- Mini wins — 2 image placeholders each -->
+    <div class="mw-section">
+      <div class="mw-title">&amp; More across categories</div>
+      <div class="mw-grid">
+        <div class="mw-item"><div class="mw-cat">Automotive</div><div class="mw-name">Piaggio – Liberty S &amp; Z Launch</div><div class="mw-imgs-real"><div class="ow-media-item"><img src="https://drive.google.com/uc?export=view&id=1QRbzF07i6aWhajPPPe59Uwp32_Kf9XOT" loading="lazy" onerror="this.parentElement.style.display='none'"></div><div class="ow-media-item"><img src="https://drive.google.com/uc?export=view&id=1YsP8VvC2k1hcZpiF9p_coSV_c9_3ecfa" loading="lazy" onerror="this.parentElement.style.display='none'"></div></div><div class="ph">img 2</div></div></div>
+        <div class="mw-item"><div class="mw-cat">Home Appliances</div><div class="mw-name">Electrolux – Make It Last</div><div class="mw-imgs-real"><div class="ow-media-item"><img src="https://drive.google.com/uc?export=view&id=1L5hmXv99DmH_H3fcqormVOeK8geh9-UT" loading="lazy" onerror="this.parentElement.style.display='none'"></div><div class="ow-media-item"><img src="https://drive.google.com/uc?export=view&id=1_ebCs3SiabsOA8Xkulm8Rujln0J81biB" loading="lazy" onerror="this.parentElement.style.display='none'"></div></div><div class="ph">img 2</div></div></div>
+        <div class="mw-item"><div class="mw-cat">Sportwear</div><div class="mw-name">Nike – Call All Runner Campaign</div><div class="mw-imgs-real"><div class="ow-media-item"><img src="https://drive.google.com/uc?export=view&id=1_b53yIm9qPh8dLLRfFWYvCm1-jxhb9GK" loading="lazy" onerror="this.parentElement.style.display='none'"></div><div class="ow-media-item"><img src="https://drive.google.com/uc?export=view&id=1LM7EgfoAJwu565FBsrAmnDgV7x4N2H1V" loading="lazy" onerror="this.parentElement.style.display='none'"></div></div><div class="ph">img 2</div></div></div>
+        <div class="mw-item"><div class="mw-cat">Food &amp; Beverage</div><div class="mw-name">Highland Coffee – Espresso Relaunch</div><div class="mw-imgs-real"><div class="ow-media-item"><img src="https://drive.google.com/uc?export=view&id=1NXIDV0PuSuR514jwDl3FCrdpS6xfOBtv" loading="lazy" onerror="this.parentElement.style.display='none'"></div><div class="ow-media-item"><img src="https://drive.google.com/uc?export=view&id=1biocg2tSlA1gWYy7bE-IaurlzLBM8boP" loading="lazy" onerror="this.parentElement.style.display='none'"></div></div><div class="ph">img 2</div></div></div>
+        <div class="mw-item"><div class="mw-cat">FMCG – Plant-based milk</div><div class="mw-name">Vinasoy – 2023 Communication</div><div class="mw-imgs-real"><div class="ow-media-item"><img src="https://drive.google.com/uc?export=view&id=1XNJ4Vptp2z7gykMySMT5tt3EdjsQeZkW" loading="lazy" onerror="this.parentElement.style.display='none'"></div><div class="ow-media-item"><img src="https://drive.google.com/uc?export=view&id=1zAyWffDR31Xs7NNuYCGjPm6WkYRfeIfT" loading="lazy" onerror="this.parentElement.style.display='none'"></div></div><div class="ph">img 2</div></div></div>
+        <div class="mw-item"><div class="mw-cat">FMCG – Milk-based product</div><div class="mw-name">NutriCare – Care 100 Communication</div><div class="mw-imgs-real"><div class="ow-media-item"><img src="https://drive.google.com/uc?export=view&id=1OVWjDcTy1vuOBZYCf2XuXw2ZJ8JNfzxg" loading="lazy" onerror="this.parentElement.style.display='none'"></div><div class="ow-media-item"><img src="https://drive.google.com/uc?export=view&id=14UKb6klC84pZNifnTWeXrawDW8eiyhy9" loading="lazy" onerror="this.parentElement.style.display='none'"></div></div><div class="ph">img 2</div></div></div>
+        <div class="mw-item"><div class="mw-cat">Real Estate</div><div class="mw-name">Vinhomes – Ocean Park Launch</div><div class="mw-imgs-real"><div class="ow-media-item"><img src="https://drive.google.com/uc?export=view&id=1LFK21qHrkI3J0lZPezJ2B5NHeEFGvj6h" loading="lazy" onerror="this.parentElement.style.display='none'"></div><div class="ow-media-item"><img src="https://drive.google.com/uc?export=view&id=1vKWASTdHarYM5gWgmYJuaAP4jbZt6MtO" loading="lazy" onerror="this.parentElement.style.display='none'"></div></div><div class="ph">img 2</div></div></div>
+        <div class="mw-item"><div class="mw-cat">Real Estate</div><div class="mw-name">VietDuc – Social Home Project</div><div class="mw-imgs-real"><div class="ow-media-item"><img src="https://drive.google.com/uc?export=view&id=1poKLahG4Zrvm5ynR54cL4-yEdneyQ0DM" loading="lazy" onerror="this.parentElement.style.display='none'"></div><div class="ow-media-item"><img src="https://drive.google.com/uc?export=view&id=1P01D7voaUlxvJYT-Pzy8iB3dW1DCFkzL" loading="lazy" onerror="this.parentElement.style.display='none'"></div></div><div class="ph">img 2</div></div></div>
+        <div class="mw-item"><div class="mw-cat">Healthcare</div><div class="mw-name">GSK – Synflorix Vaccine Launch</div><div class="mw-imgs-real"><div class="ow-media-item"><img src="https://drive.google.com/uc?export=view&id=1J3r78GCW9pKsZY5YEHN_QkkW6Ku-aEtD" loading="lazy" onerror="this.parentElement.style.display='none'"></div><div class="ow-media-item"><img src="https://drive.google.com/uc?export=view&id=1A64Kl0iEq7hlEtg_T-V202f1hynJHAMF" loading="lazy" onerror="this.parentElement.style.display='none'"></div></div><div class="ph">img 2</div></div></div>
+        <div class="mw-item"><div class="mw-cat">Beauty &amp; Personal Care</div><div class="mw-name">L'Oréal Paris – UV Defender</div><div class="mw-imgs-real"><div class="ow-media-item"><img src="https://drive.google.com/uc?export=view&id=1F_FlVkZfbLDzxwpAm0Ca5CCTuwwUQZlm" loading="lazy" onerror="this.parentElement.style.display='none'"></div><div class="ow-media-item"><img src="https://drive.google.com/uc?export=view&id=16W7SS0cW_e5PO9l1GJc8lnTxyNu_u4EJ" loading="lazy" onerror="this.parentElement.style.display='none'"></div></div><div class="ph">img 2</div></div></div>
+        <div class="mw-item"><div class="mw-cat">Consumer Finance</div><div class="mw-name">F88 – Brand Communication</div><div class="mw-imgs-real"><div class="ow-media-item"><img src="https://drive.google.com/uc?export=view&id=1fov2qv1fiAs_bIAWWAwSO2jB9jHhOshb" loading="lazy" onerror="this.parentElement.style.display='none'"></div><div class="ow-media-item"><img src="https://drive.google.com/uc?export=view&id=14FdSbDxd7Q4yd6Cz-RAIX6AbaKwAkno9" loading="lazy" onerror="this.parentElement.style.display='none'"></div></div><div class="ph">img 2</div></div></div>
+        <div class="mw-item"><div class="mw-cat">Beauty &amp; Personal Care</div><div class="mw-name">Saforelle – Full Year 2026</div><div class="mw-imgs-real"><div class="ow-media-item"><img src="https://drive.google.com/uc?export=view&id=1FqwnQ9xDhaafRdbyYMLOmPu_yaS9bICY" loading="lazy" onerror="this.parentElement.style.display='none'"></div><div class="ow-media-item"><img src="https://drive.google.com/uc?export=view&id=1f2lQi084_aZYB90ab6YKS0HNCmK4_ot7" loading="lazy" onerror="this.parentElement.style.display='none'"></div></div><div class="ph">img 2</div></div></div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- §5 CONTACT -->
+<section id="contact">
+  <div class="section-eyebrow reveal" style="justify-content:center">Contact</div>
+  <h2 class="contact-headline reveal">Let's build something<br><em>worth disrupting.</em></h2>
+  <div class="contact-links reveal reveal-delay-2">
+    <a class="contact-row" href="https://linkedin.com/in/nguyencamtumai" target="_blank" rel="noopener">
+      <div class="contact-icon">in</div>
+      <span class="contact-val">linkedin.com/in/nguyencamtumai</span>
+    </a>
+    <a class="contact-row" href="mailto:nguyencamtumai@gmail.com">
+      <div class="contact-icon">@</div>
+      <span class="contact-val">nguyencamtumai@gmail.com</span>
+    </a>
+    <a class="contact-row" href="tel:+84773103600">
+      <div class="contact-icon">☎</div>
+      <span class="contact-val">+84 773 103 600</span>
+    </a>
+  </div>
+  <div class="contact-footer">
+    <span class="contact-footer-name">Thank you for visiting</span>
+    <span class="contact-footer-copy">© 2025</span>
+  </div>
+</section>
+
+<script>
+const nav=document.getElementById('nav');
+const navLinks=document.querySelectorAll('.nav-links a');
+const sections=document.querySelectorAll('section[id]');
+window.addEventListener('scroll',()=>{
+  nav.classList.toggle('scrolled',window.scrollY>20);
+  let cur='';
+  sections.forEach(s=>{if(window.scrollY>=s.offsetTop-90)cur=s.id});
+  navLinks.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+cur));
+},{passive:true});
+
+const hamburger=document.getElementById('hamburger');
+const navMobile=document.getElementById('navMobile');
+hamburger.addEventListener('click',()=>{
+  const open=navMobile.classList.toggle('open');
+  hamburger.classList.toggle('open',open);
+  document.body.style.overflow=open?'hidden':'';
+});
+function closeMobile(){navMobile.classList.remove('open');hamburger.classList.remove('open');document.body.style.overflow='';}
+
+const revealObs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');revealObs.unobserve(e.target);}});
+},{threshold:0.1,rootMargin:'0px 0px -50px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>revealObs.observe(el));
+
+document.querySelectorAll('.exp-item').forEach(item=>{
+  item.addEventListener('click',()=>{
+    const was=item.classList.contains('open');
+    document.querySelectorAll('.exp-item').forEach(i=>i.classList.remove('open'));
+    if(!was)item.classList.add('open');
+  });
+});
+
+/* ── ERA DATA & LOGIC ── */
+const eraData=[
+  {period:'Mar 2025 – Apr 2026',role:'Strategic Planning Manager',agency:'VML / CLICK Media',filter:'',
+   cats:[
+    {cat:'Finance &amp; Banking',logos:['Techcombank','Mastercard'],filter:'Finance & Banking'},
+    {cat:'Beauty &amp; Personal Care',logos:["L'Oréal Paris",'3CE','Saforelle',"L'Oréal Derm"],filter:'Beauty & Personal Care'},
+    {cat:'Building &amp; Construction',logos:['KOVA'],filter:'Building & Construction'},
+    {cat:'Sportwear',logos:['Nike'],filter:''},
+    {cat:'F&amp;B',logos:['Highland Coffee'],filter:''}
+  ]},
+  {period:'Apr 2024 – Feb 2025',role:'Associate Planning Manager',agency:'TBWA\\Group Vietnam',filter:'',
+   cats:[
+    {cat:'Finance &amp; Banking',logos:['MBBank'],filter:'Finance & Banking'},
+    {cat:'Beauty &amp; Personal Care',logos:["L'Oréal Paris",'3CE','Masan'],filter:'Beauty & Personal Care'},
+    {cat:'B2B &amp; Industrial',logos:['Panasonic'],filter:'B2B & Industrial'},
+    {cat:'B2B Logistics',logos:['247Express'],filter:'B2B Logistics'},
+    {cat:'FMCG',logos:['NutriCare','Vinasoy'],filter:'FMCG'},
+    {cat:'Building &amp; Construction',logos:['VietDuc'],filter:'Building & Construction'},
+    {cat:'Real Estate',logos:['Masterise'],filter:''}
+  ]},
+  {period:'Mar 2023 – Mar 2024',role:'Associate Planning Manager',agency:'TEQUILA / TBWA',filter:'',
+   cats:[
+    {cat:'FMCG',logos:['Ajinomoto','Vinasoy'],filter:'FMCG'},
+    {cat:'Imported Fruits',logos:['Zespri'],filter:''},
+    {cat:'Insurance',logos:['Hanwha Life'],filter:'Insurance'},
+    {cat:'Building &amp; Construction',logos:['Jorakay'],filter:'Building & Construction'}
+  ]},
+  {period:'Oct 2021 – Feb 2023',role:'Planning Supervisor',agency:'TEQUILA / TBWA',filter:'',
+   cats:[
+    {cat:'Finance &amp; Banking',logos:['F88'],filter:'Finance & Banking'},
+    {cat:'Real Estate',logos:['Vinhomes'],filter:''},
+    {cat:'Insurance',logos:['Allianz'],filter:'Insurance'},
+    {cat:'Tourism',logos:['Singapore TB'],filter:'Tourism'},
+    {cat:'Other',logos:['Amanotes'],filter:''}
+  ]},
+  {period:'Sep 2018 – Sep 2021',role:'Account Executive → Senior AE',agency:'TEQUILA / TBWA',filter:'',
+   cats:[
+    {cat:'Insurance',logos:['Prudential'],filter:'Insurance'},
+    {cat:'Healthcare',logos:['Philips','GSK'],filter:''},
+    {cat:'B2B &amp; Industrial',logos:['Schneider','Noluma'],filter:'B2B & Industrial'},
+    {cat:'Automotive',logos:['Bridgestone'],filter:''},
+    {cat:'Home Appliances',logos:['Electrolux'],filter:''},
+    {cat:'FMCG',logos:['Danisa'],filter:'FMCG'},
+    {cat:'Tourism',logos:['Singapore TB'],filter:'Tourism'}
+  ]},
+  {period:'May 2017 – Mar 2018',role:'Account Intern',agency:'T&A Ogilvy',filter:'',
+   cats:[
+    {cat:'Automotive',logos:['Ford','Uber'],filter:''},
+    {cat:'Finance',logos:['Visa'],filter:'Finance & Banking'},
+    {cat:'Tech',logos:['Samsung'],filter:''}
+  ]},
+  {period:'2021 – Present',role:'Freelance Strategic Planner',agency:'Independent',filter:'',
+   cats:[
+    {cat:'Finance &amp; Banking',logos:['MSB','VIB','ACB','MBBank'],filter:'Finance & Banking'},
+    {cat:'Beauty &amp; Personal Care',logos:["L'Oréal Paris","L'Oréal Derm"],filter:'Beauty & Personal Care'},
+    {cat:'FMCG',logos:['Unilever'],filter:'FMCG'},
+    {cat:'Automotive',logos:['Piaggio'],filter:''},
+    {cat:'Other',logos:['FPT'],filter:''}
+  ]}
+];
+
+const logoUrls={
+  'Techcombank':'https://drive.google.com/uc?export=view&id=1NjfEcULivm0FP_zAnQLdCHRHaUbyk7T7',
+  'MBBank':'https://drive.google.com/uc?export=view&id=1k8u2uz_IZ0SPR5LPsP-zPBZpcRlHEq3Z',
+  'BIZ MBBank':'https://drive.google.com/uc?export=view&id=1gL3OQDFRBKoXnqvaCnaC-cJ_Pzgrc3X-',
+  'Mastercard':'https://drive.google.com/uc?export=view&id=1-1-ZG3R6g56Li6ORe9trcRI7atyMD8W5',
+  'MSB':'https://drive.google.com/uc?export=view&id=1dNbya6Iw-PsbqdUEPSDcpeHmuPmk7fY5',
+  'VIB':'https://drive.google.com/uc?export=view&id=1JSZ4qDPjLk8bMM0rNR6z7tt3iwhSbPA4',
+  'ACB':'https://drive.google.com/uc?export=view&id=11jPDbXjeAQhW01BHPFclItZN4fVaWy-O',
+  'F88':'https://drive.google.com/uc?export=view&id=1p3clZGeJN96VsP2qfpIO-V-MfE4SXHlS',
+  'Prudential':'https://drive.google.com/uc?export=view&id=1Ho1v-lk8H3JUcbQ8ZE5axhc4besWTKGM',
+  'Hanwha Life':'https://drive.google.com/uc?export=view&id=1VxasD1NYo_nUiyofnxx-Jsc5aX5Hc7Vf',
+  'Allianz':'https://drive.google.com/uc?export=view&id=1vPmofSM7ab1uazFZF_YzpC3qGXP95YVL',
+  'Ajinomoto':'https://drive.google.com/uc?export=view&id=1AzvwMwkeYG1FUYM15845DGVrS9yKUdTe',
+  'Zespri':'https://drive.google.com/uc?export=view&id=1Zv4VMTtlY6zydI3fvMg5CPzGVWeT16-E',
+  'Vinasoy':'https://drive.google.com/uc?export=view&id=1xS4Spg3fHn6HtFvUBWU7LYsi4mv87SUL',
+  'NutriCare':'https://drive.google.com/uc?export=view&id=1bt-W10WoDBgZ8x6uYJBNeEprenBCyjCG',
+  'Danisa':'https://drive.google.com/uc?export=view&id=1qKHMMuT3Dja-fxmV12APqIgeQM4kWvEx',
+  "L'Oréal Paris":'https://drive.google.com/uc?export=view&id=1PasN4wAq9VNHtujG45XtqDlZAHthzWIy',
+  '3CE':'https://drive.google.com/uc?export=view&id=1q17CvIG4j5ux2TqrH9mSpJ9qRKiv1zqV',
+  'Saforelle':'https://drive.google.com/uc?export=view&id=16u6GvmbQTiyuOJp3G4DxL5fsSybCps-i',
+  "L'Oréal Derm":'https://drive.google.com/uc?export=view&id=17yaRLeqWOOgs35LxaBGk-ZUDo-ZzpUUx',
+  'Panasonic':'https://drive.google.com/uc?export=view&id=1SSG-9WY9c0BKdxxIApvaEKrCvT-QU764',
+  'Schneider':'https://drive.google.com/uc?export=view&id=1C7ZCO9WS_nfnkORb-8bJcysOGuKeJs8L',
+  'Philips':'https://drive.google.com/uc?export=view&id=1D5aPeTW2GTHpCRweYafUhzCtRZIfacUb',
+  'Bridgestone':'https://drive.google.com/uc?export=view&id=1HAfTIWzFPXvw4i4XWDB2X0sL9uruNq4V',
+  'Electrolux':'https://drive.google.com/uc?export=view&id=1w5EOxB634i8eNyPBOg_PaX4dleSrdxEW',
+  '247Express':'https://drive.google.com/uc?export=view&id=1gqm9Zj_y9p9hMByzuMdIyznJ9vQe0nsA',
+  'VietDuc':'https://drive.google.com/uc?export=view&id=1kRCiJhzkHEFt-mId6TOj3NRhnd-ITES5',
+  'Jorakay':'https://drive.google.com/uc?export=view&id=1_rKhA_6hbEifoUI0uaK87xNZ54dpnW9t',
+  'Vinhomes':'https://drive.google.com/uc?export=view&id=1MPduwMP4VWNBoA6BZKEHvubxbG7nCLMn',
+  'Masterise':'https://drive.google.com/uc?export=view&id=16WotK700MxM1hnrITQDBo7-dy9mm19U-',
+  'Singapore TB':'https://drive.google.com/uc?export=view&id=1eGuQtivvMln43sNlaHAxHbyJs9NC_p7v',
+  'Piaggio':'https://drive.google.com/uc?export=view&id=1Y-R-scHIPd1X5I8Ml5e6EU1q-gptRLDI',
+  'FPT':'https://drive.google.com/uc?export=view&id=1dj9fafysL9ioyOPnhBkPk3B-nvPXMFXh',
+  'GSK':'https://drive.google.com/uc?export=view&id=1oPrWXEXxfM-7G4Xi93mplqHvbaqQtN75',
+  'Nike':'https://drive.google.com/uc?export=view&id=1-mqVX5tszI3lmyekEcFHhKaIpUpFAdvG',
+  'Amanotes':'https://drive.google.com/uc?export=view&id=1oJXXb0wj5at3lY7bInF2gG4X_00LUfXf',
+  'Unilever':'https://drive.google.com/uc?export=view&id=1lz7M6Y2GjLbTeH4rRuZurVIrwuu9HbYv',
+  'Samsung':'https://drive.google.com/uc?export=view&id=1mAPIOHVPCX96EB3Xm35g8i8w4FPQm2D6',
+  'Uber':'https://drive.google.com/uc?export=view&id=1ymuFarAJne_0FBweRE-AnjZyAD8yaFA7',
+  'Visa':'https://drive.google.com/uc?export=view&id=1ZYQYnCZTNrcR5aYZMvqRQgXvMMQc7tHh',
+  'KOVA':'https://drive.google.com/uc?export=view&id=1GKhzsydylhIz_voIkbyNi9OIHhfXVEpl',
+  'Highland Coffee':'https://drive.google.com/uc?export=view&id=1utdPduR7EAf72Zqbsz7acpct3lzruK7D',
+  'Ford':'https://drive.google.com/uc?export=view&id=19y0yzwDvLexYRb5vbNRlsBMdz3DpjwhF',
+  'Masan':'https://drive.google.com/uc?export=view&id=1YtyPhDr0nEOD0sz7jTu_4jKY2Ue6-QpG',
+  "L'Oréal Paris":'https://drive.google.com/uc?export=view&id=1PasN4wAq9VNHtujG45XtqDlZAHthzWIy',
+  "L'Oréal Derm":'https://drive.google.com/uc?export=view&id=17yaRLeqWOOgs35LxaBGk-ZUDo-ZzpUUx',
+  'Noluma':'https://drive.google.com/uc?export=view&id=14ylwnkXK-MimLgwEMy-Bmm2OL_OKumFz'
+};
+
+function logoEl(name){
+  const url=logoUrls[name];
+  if(url) return `<div class="bl-logo"><img src="${url}" alt="${name}" title="${name}" onerror="this.parentElement.innerHTML='<span>${name}</span>'" loading="lazy"></div>`;
+  return `<div class="bl-logo"><span>${name}</span></div>`;
+}
+
+let activeCatFilter='';
+const CAT_ORDER=[
+  'Finance &amp; Banking','Finance','Beauty &amp; Personal Care','Insurance',
+  'FMCG','Imported Fruits','B2B &amp; Industrial','B2B Logistics',
+  'Building &amp; Construction','Real Estate','Healthcare','Automotive',
+  'Home Appliances','Tourism','F&amp;B','Sportwear','Tech','Other'
+];
+function catSortKey(c){const i=CAT_ORDER.indexOf(c.cat);return i===-1?99:i;}
+
+function selectEra(i,el){
+  document.querySelectorAll('.cl-tab').forEach(t=>t.classList.remove('active'));
+  el.classList.add('active');
+  const d=eraData[i];
+  document.getElementById('cl-panel-meta').innerHTML=
+    `<div class="cl-panel-role">${d.role}</div><div class="cl-panel-info">${d.agency} &nbsp;·&nbsp; ${d.period}</div>`;
+  document.getElementById('cl-swimlanes').innerHTML=d.cats.slice().sort((a,b)=>catSortKey(a)-catSortKey(b)).map(c=>
+    `<div class="bl-lane" data-filter="${c.filter||''}" onclick="highlightLane(this,'${c.filter||''}')">
+      <div class="bl-cat">${c.cat}</div>
+      <div class="bl-logos">${c.logos.map(l=>logoEl(l)).join('')}</div>
+    </div>`
+  ).join('');
+  document.getElementById('cl-case-bar').style.display='none';
+  activeCatFilter='';
+}
+
+function highlightLane(el,filter){
+  document.querySelectorAll('.bl-lane').forEach(l=>l.style.background='#f9fafb');
+  el.style.background='#f0fdf4';
+  const bar=document.getElementById('cl-case-bar');
+  if(filter){
+    bar.style.display='flex';
+    document.getElementById('cl-case-btn').onclick=()=>{
+      const tab=Array.from(document.querySelectorAll('.case-tab')).find(t=>t.dataset.filter===filter);
+      if(tab){
+        document.querySelectorAll('.case-tab').forEach(t=>t.classList.remove('active'));
+        tab.classList.add('active');
+        document.querySelectorAll('.case-card').forEach(c=>c.classList.toggle('visible',c.dataset.cat===filter));
+      }
+      document.getElementById('cases').scrollIntoView({behavior:'smooth',block:'start'});
+    };
+  } else {
+    bar.style.display='none';
+  }
+}
+
+// Init first era
+selectEra(0,document.querySelector('.cl-tab'));
+
+document.querySelectorAll('.case-tab').forEach(tab=>{
+  tab.addEventListener('click',()=>{
+    document.querySelectorAll('.case-tab').forEach(t=>t.classList.remove('active'));
+    tab.classList.add('active');
+    const f=tab.dataset.filter;
+    document.querySelectorAll('.case-card').forEach(card=>{
+      const cardCat=card.dataset.cat||'';
+      const match=f==='all'||cardCat===f||cardCat===f.replace(/&amp;/g,'&');
+      card.classList.toggle('visible',match);
+    });
+  });
+});
+
+document.querySelectorAll('.case-card').forEach(card=>{
+  card.addEventListener('click',()=>{
+    const was=card.classList.contains('expanded');
+    document.querySelectorAll('.case-card').forEach(c=>c.classList.remove('expanded'));
+    if(!was)card.classList.add('expanded');
+  });
+});
+
+/* ── MODAL ── */
+function openModal(card){
+  const raw = card.getAttribute('data-modal');
+  const html = raw.replace(/&amp;/g,'&').replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&quot;/g,'"').replace(/&#39;/g,"'");
+  document.getElementById('modalInner').innerHTML = html;
+  document.getElementById('caseModal').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closeModal(){
+  document.getElementById('caseModal').classList.remove('open');
+  document.body.style.overflow='';
+  // Pause all iframes
+  document.querySelectorAll('#modalInner iframe').forEach(f=>{
+    f.src = f.src;
+  });
+}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal();});
+
+</script>
+
+<!-- ── CASE STUDY MODAL ── -->
+<div class="modal-overlay" id="caseModal" onclick="if(event.target===this)closeModal()">
+  <div class="modal-box" id="modalBox">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <div class="modal-inner" id="modalInner"></div>
+  </div>
+</div>
+
+</body>
+</html>
