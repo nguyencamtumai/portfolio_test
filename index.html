@@ -854,7 +854,10 @@ section{padding:100px 60px}
 .mg-item.mg-img img:hover{opacity:.88}
 .mg-item.mg-video{flex-shrink:0;border-radius:8px;overflow:hidden;width:280px;height:160px;background:#f3f4f6}
 .mg-item.mg-video iframe{width:100%;height:100%;border:none;display:block}
-
+/* Ẩn các khối ảnh dư thừa bị chèn nhầm ở phần đầu của tất cả các modal */
+#modalInner > .mg-item {
+    display: none !important;
+}
 </style>
 </head>
 <body>
